@@ -1,5 +1,5 @@
 collector_count: 
-	number=1 ; while [[ $$number -le 42 ]] ; do \
+	number=1 ; while  $$number -le 42  ; do \
         python collector_counter collector_count ; \
         ((number = number + 1)) ; \
     done
