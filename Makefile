@@ -111,10 +111,10 @@ DATA_OLDEST = results/data-all-2019.dat \
 all: results/col-count.dat
 
 results/col-count-1.dat: bin/collector_counter.py
-	python bin/collector_counter.py 1
+	python2.7 bin/collector_counter.py 1
 
 results/col-count-%.dat: bin/collector_counter.py
-	python bin/collector_counter.py $(patsubst results/col-count-%.dat,%,$@)
+	python2.7 bin/collector_counter.py $(patsubst results/col-count-%.dat,%,$@)
 
 results/col-count.dat: $(COL_COUNT_STATS)
 	cat $^ > $@
