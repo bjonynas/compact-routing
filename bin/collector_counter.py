@@ -12,7 +12,7 @@ graph = nx.DiGraph()
 time1 = 1546300800
 time2 = 1546344000
 num_collectors = int(sys.argv[1])
-collector_list = open('collector_list', 'r')
+collector_list = open('bin/collector_list', 'r')
 
 stream.add_filter('record-type', 'ribs')
 stream.add_interval_filter(time1,time2)
