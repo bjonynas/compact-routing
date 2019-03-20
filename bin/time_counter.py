@@ -13,9 +13,9 @@ time1 = 1546300800
 time2 = time1 + 3600*int(sys.argv[1])
 
 stream.add_filter('record-type', 'ribs')
-#stream.add_filter('collector', 'rrc11')
-stream.add_filter('project', 'ris')
-stream.add_filter('project', 'routeviews')
+stream.add_filter('collector', 'rrc11')
+#stream.add_filter('project', 'ris')
+#stream.add_filter('project', 'routeviews')
 
 stream.add_interval_filter(time1,time2)
 stream.start()
