@@ -18,9 +18,12 @@ stream.add_filter('record-type', 'ribs')
 stream.add_interval_filter(time1,time2)
 
 for c in range(num_collectors):
-    stream.add_filter('collector', collector_list.readline())
+	collector = collector_list.readline()
+	print('collector:' + collector)
+    stream.add_filter('collector', collector)
 
 collector_list.close()
+
 stream.start()
 
 while(stream.get_next_record(rec)):
