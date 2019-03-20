@@ -9,8 +9,8 @@ stream = BGPStream()
 rec = BGPRecord()
 graph = nx.DiGraph()
 
-time1 = int(sys.argv[1])
-time2 = int(sys.argv[2])
+time1 = 1546300800
+time2 = time1 + 3600*int(sys.argv[1])
 
 stream.add_filter('record-type', 'ribs')
 #stream.add_filter('collector', 'rrc11')
@@ -42,6 +42,6 @@ while(stream.get_next_record(rec)):
 end = time.time()
 output = str(int(time2) - int(time1)) + ' ' + str(graph.number_of_nodes()) + ' ' + str(graph.number_of_edges()) + str(end-start)
 
-f = open('stage1/time_counter_output.txt', 'a+')
-f.append(output)
-f.close
+f = open('time_count-' + sys.argv[1] + '.dat', 'w')
+f.write(output)
+f.close()
