@@ -40,8 +40,8 @@ while(stream.get_next_record(rec)):
             elem = rec.get_next_elem()
 
 end = time.time()
-output = str(int(time2) - int(time1)) + ' ' + str(graph.number_of_nodes()) + ' ' + str(graph.number_of_edges()) + str(end-start)
+output = 'duration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(end-start)
 
-f = open('time_count-' + sys.argv[1] + '.dat', 'w')
+f = open('time_count-' + str(sys.argv[1]) + '.dat', 'w')
 f.write(output)
 f.close()
