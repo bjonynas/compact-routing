@@ -114,7 +114,7 @@ results/col-count.dat: $(COL_COUNT_STATS)
 	cat $^ > $@
 
 results/col-count-%.dat: bin/collector_counter.py
-	python2.7 bin/collector_counter.py $(patsubst results/col-count-%.dat,%,$@)
+	python2.7 bin/collector_counter.py 1
 
 results/time-count.dat: $(TIME_COUNT_STATS)
 	cat $^ > $@
