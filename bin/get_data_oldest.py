@@ -48,7 +48,7 @@ while(stream.get_next_record(rec)):
 
 graph.remove_edges_from(nx.selfloop_edges(graph))
 
-saveFile = open('results/stage1/data_all_' + year + '.dat', 'w')
+saveFile = open('results/stage1/data_oldest_' + year + '.dat', 'w')
 for e in graph.edges:
     saveFile.write(str(e) + '\n')
 
