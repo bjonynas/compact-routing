@@ -47,6 +47,6 @@ while(stream.get_next_record(rec)):
 end = time.time()
 output = sys.argv[1] + ' ' + str(graph.number_of_nodes()) + ' ' + str(graph.number_of_edges()) + ' ' + str(int(end-start))
 
-f = open('col_count-' + num_collectors + '.dat', 'w')
+f = open('results/col_count-' + num_collectors + '.dat', 'w')
 f.write(output)
 f.close()
