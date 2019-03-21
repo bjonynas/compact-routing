@@ -2,6 +2,7 @@ import networkx as nx
 import sys
 import time
 import datetime
+import os
 from _pybgpstream import BGPStream, BGPRecord, BGPElem
 
 start = time.time()
@@ -47,6 +48,9 @@ while(stream.get_next_record(rec)):
             elem = rec.get_next_elem()
 
 graph.remove_edges_from(nx.selfloop_edges(graph))
+
+if not os.path.exists('./results/stage1'):
+    os.makedirs('./results/stage1')
 
 saveFile = open('results/stage1/data_all_' + year + '.dat', 'w+')
 for e in graph.edges:
