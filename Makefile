@@ -89,27 +89,27 @@ DATA_ALL = results/stage1/data-all-2019.dat \
 			results/stage1/data-all-2002.dat \
 			results/stage1/data-all-2001.dat \
 			results/stage1/data-all-2000.dat \
-			
-DATA_OLDEST = results/stage1/data-all-2019.dat \
-				results/stage1/data-all-2018.dat \
-				results/stage1/data-all-2017.dat \
-				results/stage1/data-all-2016.dat \
-				results/stage1/data-all-2015.dat \
-				results/stage1/data-all-2014.dat \
-				results/stage1/data-all-2013.dat \
-				results/stage1/data-all-2012.dat \
-				results/stage1/data-all-2011.dat \
-				results/stage1/data-all-2010.dat \
-				results/stage1/data-all-2009.dat \
-				results/stage1/data-all-2008.dat \
-				results/stage1/data-all-2007.dat \
-				results/stage1/data-all-2006.dat \
-				results/stage1/data-all-2005.dat \
-				results/stage1/data-all-2004.dat \
-				results/stage1/data-all-2003.dat \
-				results/stage1/data-all-2002.dat \
-				results/stage1/data-all-2001.dat \
-				results/stage1/data-all-2000.dat \
+
+DATA_OLDEST = results/stage1/data-oldest-2019.dat \
+				results/stage1/data-oldest-2018.dat \
+				results/stage1/data-oldest-2017.dat \
+				results/stage1/data-oldest-2016.dat \
+				results/stage1/data-oldest-2015.dat \
+				results/stage1/data-oldest-2014.dat \
+				results/stage1/data-oldest-2013.dat \
+				results/stage1/data-oldest-2012.dat \
+				results/stage1/data-oldest-2011.dat \
+				results/stage1/data-oldest-2010.dat \
+				results/stage1/data-oldest-2009.dat \
+				results/stage1/data-oldest-2008.dat \
+				results/stage1/data-oldest-2007.dat \
+				results/stage1/data-oldest-2006.dat \
+				results/stage1/data-oldest-2005.dat \
+				results/stage1/data-oldest-2004.dat \
+				results/stage1/data-oldest-2003.dat \
+				results/stage1/data-oldest-2002.dat \
+				results/stage1/data-oldest-2001.dat \
+				results/stage1/data-oldest-2000.dat \
 
 all: $(DATA_ALL) $(DATA_OLDEST)
 
