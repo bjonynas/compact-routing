@@ -20,7 +20,7 @@ time2 = datetime.datetime(int(year), 1, 1, 1, 0)
 time2 = int((time2 - epoch).total_seconds())
 
 stream.add_filter('record-type', 'ribs')
-stream.add_filter('collector', 'rrc19')
+stream.add_filter('collector', 'rrc00')
 #stream.add_filter('project', 'ris')
 #stream.add_filter('project', 'routeviews')
 

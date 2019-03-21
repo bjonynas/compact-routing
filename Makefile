@@ -213,11 +213,11 @@ results/stage1/data-oldest-2000.dat: bin/get_data_oldest.py
 #--------------------------------------------------------------------------#
 
 clean:
-	rm $(COL_COUNT_STATS)
-	rm results/col-count.dat
+#	rm $(COL_COUNT_STATS)
+#	rm results/col-count.dat
 	
-	rm $(TIME_COUNT_STATS)
-	rm results/time-count.dat
+#	rm $(TIME_COUNT_STATS)
+#	rm results/time-count.dat
 
 	rm $(DATA_ALL)
 	rm $(DATA_OLDEST)
