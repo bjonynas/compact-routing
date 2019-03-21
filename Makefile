@@ -144,69 +144,69 @@ results/data-all-2012.dat: bin/get_data_all.py
 	python2.7 bin/get_data_all.py 2012
 results/data-all-2011.dat: bin/get_data_all.py
 	python2.7 bin/get_data_all.py 2011
-results/data-all-2010.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2010
-results/data-all-2009.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2009
-results/data-all-2008.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2008
-results/data-all-2007.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2007
-results/data-all-2006.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2006
-results/data-all-2005.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2005
-results/data-all-2004.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2004
-results/data-all-2003.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2003
-results/data-all-2002.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2002
-results/data-all-2001.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2001
-results/data-all-2000.dat: bin/get_data_all.py
-	python2.7 bin/get_data_all.py 2000
-
-results/data-all-2019.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2019
-results/data-all-2018.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2018
-results/data-all-2017.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2017
-results/data-all-2016.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2016
-results/data-all-2015.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2015
-results/data-all-2014.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2014
-results/data-all-2013.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2013
-results/data-all-2012.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2012
-results/data-all-2011.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2011
-results/data-all-2010.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2010
-results/data-all-2009.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2009
-results/data-all-2008.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2008
-results/data-all-2007.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2007
-results/data-all-2006.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2006
-results/data-all-2005.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2005
-results/data-all-2004.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2004
-results/data-all-2003.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2003
-results/data-all-2002.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2002
-results/data-all-2001.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2001
-results/data-all-2000.dat: bin/get_data_oldest.py
-	python2.7 bin/get_data_oldest.py 2000
+#results/data-all-2010.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2010
+#results/data-all-2009.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2009
+#results/data-all-2008.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2008
+#results/data-all-2007.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2007
+#results/data-all-2006.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2006
+#results/data-all-2005.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2005
+#results/data-all-2004.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2004
+#results/data-all-2003.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2003
+#results/data-all-2002.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2002
+#results/data-all-2001.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2001
+#results/data-all-2000.dat: bin/get_data_all.py
+#	python2.7 bin/get_data_all.py 2000
+#
+#results/data-all-2019.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2019
+#results/data-all-2018.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2018
+#results/data-all-2017.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2017
+#results/data-all-2016.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2016
+#results/data-all-2015.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2015
+#results/data-all-2014.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2014
+#results/data-all-2013.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2013
+#results/data-all-2012.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2012
+#results/data-all-2011.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2011
+#results/data-all-2010.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2010
+#results/data-all-2009.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2009
+#results/data-all-2008.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2008
+#results/data-all-2007.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2007
+#results/data-all-2006.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2006
+#results/data-all-2005.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2005
+#results/data-all-2004.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2004
+#results/data-all-2003.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2003
+#results/data-all-2002.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2002
+#results/data-all-2001.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2001
+#results/data-all-2000.dat: bin/get_data_oldest.py
+#	python2.7 bin/get_data_oldest.py 2000
 
 
 
