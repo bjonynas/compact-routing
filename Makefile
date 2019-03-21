@@ -113,13 +113,13 @@ all: results/col-count.dat
 results/col-count.dat: $(COL_COUNT_STATS)
 	cat $^ > $@
 
-results/col-count-%.dat: bin/collector_counter.py
+results/col-count-*.dat: bin/collector_counter.py
 	python2.7 bin/collector_counter.py 1
 
 results/time-count.dat: $(TIME_COUNT_STATS)
 	cat $^ > $@
 
-results/time-count-%.dat: bin/collector_counter.py
+results/time-count-%.dat: bin/time_counter.py
 	python bin/time_counter.py $(patsubst results/time-count-%.dat,%,$@)
 
 data/data-2018.dat:
