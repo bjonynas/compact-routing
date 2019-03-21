@@ -68,48 +68,52 @@ TIME_COUNT_STATS = results/time-count-0.dat \
 					results/time-count-23.dat \
 					results/time-count-24.dat \
 
-DATA_ALL = results/data-all-2019.dat \
-			results/data-all-2017.dat \
-			results/data-all-2016.dat \
-			results/data-all-2015.dat \
-			results/data-all-2014.dat \
-			results/data-all-2013.dat \
-			results/data-all-2012.dat \
-			results/data-all-2011.dat \
-			results/data-all-2010.dat \
-			results/data-all-2009.dat \
-			results/data-all-2008.dat \
-			results/data-all-2007.dat \
-			results/data-all-2006.dat \
-			results/data-all-2005.dat \
-			results/data-all-2004.dat \
-			results/data-all-2003.dat \
-			results/data-all-2002.dat \
-			results/data-all-2001.dat \
-			results/data-all-2000.dat \
+DATA_ALL = results/stage1/data-all-2019.dat \
+			results/stage1/data-all-2018.dat \
+			results/stage1/data-all-2017.dat \
+			results/stage1/data-all-2016.dat \
+			results/stage1/data-all-2015.dat \
+			results/stage1/data-all-2014.dat \
+			results/stage1/data-all-2013.dat \
+			results/stage1/data-all-2012.dat \
+			results/stage1/data-all-2011.dat \
+			results/stage1/data-all-2010.dat \
+			results/stage1/data-all-2009.dat \
+			results/stage1/data-all-2008.dat \
+			results/stage1/data-all-2007.dat \
+			results/stage1/data-all-2006.dat \
+			results/stage1/data-all-2005.dat \
+			results/stage1/data-all-2004.dat \
+			results/stage1/data-all-2003.dat \
+			results/stage1/data-all-2002.dat \
+			results/stage1/data-all-2001.dat \
+			results/stage1/data-all-2000.dat \
 			
-DATA_OLDEST = results/data-all-2019.dat \
-				results/data-all-2017.dat \
-				results/data-all-2016.dat \
-				results/data-all-2015.dat \
-				results/data-all-2014.dat \
-				results/data-all-2013.dat \
-				results/data-all-2012.dat \
-				results/data-all-2011.dat \
-				results/data-all-2010.dat \
-				results/data-all-2009.dat \
-				results/data-all-2008.dat \
-				results/data-all-2007.dat \
-				results/data-all-2006.dat \
-				results/data-all-2005.dat \
-				results/data-all-2004.dat \
-				results/data-all-2003.dat \
-				results/data-all-2002.dat \
-				results/data-all-2001.dat \
-				results/data-all-2000.dat \
+DATA_OLDEST = results/stage1/data-all-2019.dat \
+				results/stage1/data-all-2018.dat \
+				results/stage1/data-all-2017.dat \
+				results/stage1/data-all-2016.dat \
+				results/stage1/data-all-2015.dat \
+				results/stage1/data-all-2014.dat \
+				results/stage1/data-all-2013.dat \
+				results/stage1/data-all-2012.dat \
+				results/stage1/data-all-2011.dat \
+				results/stage1/data-all-2010.dat \
+				results/stage1/data-all-2009.dat \
+				results/stage1/data-all-2008.dat \
+				results/stage1/data-all-2007.dat \
+				results/stage1/data-all-2006.dat \
+				results/stage1/data-all-2005.dat \
+				results/stage1/data-all-2004.dat \
+				results/stage1/data-all-2003.dat \
+				results/stage1/data-all-2002.dat \
+				results/stage1/data-all-2001.dat \
+				results/stage1/data-all-2000.dat \
 
-all: results/col-count.dat
+all: $(DATA_ALL) $(DATA_OLDEST)
 
+
+#-------------------------------------Stage 1-------------------------------------#
 #results/col-count.dat: $(COL_COUNT_STATS)
 #	cat $^ > $@
 
@@ -203,6 +207,10 @@ results/data-all-2001.dat: bin/get_data_oldest.py
 	python2.7 bin/get_data_oldest.py 2001
 results/data-all-2000.dat: bin/get_data_oldest.py
 	python2.7 bin/get_data_oldest.py 2000
+
+
+
+#--------------------------------------------------------------------------#
 
 clean:
 	rm $(COL_COUNT_STATS)
