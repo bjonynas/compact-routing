@@ -110,20 +110,17 @@ DATA_OLDEST = results/data-all-2019.dat \
 
 all: results/col-count.dat
 
-results/col-count-1.dat: bin/collector_counter.py
-	python2.7 bin/collector_counter.py 1
+results/col-count.dat: $(COL_COUNT_STATS)
+	cat $^ > $@
 
 results/col-count-%.dat: bin/collector_counter.py
 	python2.7 bin/collector_counter.py $(patsubst results/col-count-%.dat,%,$@)
 
-results/col-count.dat: $(COL_COUNT_STATS)
+results/time-count.dat: $(TIME_COUNT_STATS)
 	cat $^ > $@
 
 results/time-count-%.dat: bin/collector_counter.py
 	python bin/time_counter.py $(patsubst results/time-count-%.dat,%,$@)
-
-results/time-count.dat: $(TIME_COUNT_STATS)
-	cat $^ > $@
 
 data/data-2018.dat:
 	bin/get-data.py 2018
@@ -134,5 +131,3 @@ clean:
 	
 	rm $(TIME_COUNT_STATS)
 	rm results/time-count.dat
-
-
