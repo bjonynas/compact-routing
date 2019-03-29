@@ -50,7 +50,7 @@ while(stream.get_next_record(rec)):
             path = elem.fields.get('as-path')
 
             if '{' in path:
-                p = path.split
+                p = path.split()
                 for n in p:
                     if '{' in n:
                         set = n.replace('{', ' ')
