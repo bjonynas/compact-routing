@@ -13,18 +13,22 @@ graph = nx.DiGraph()
 epoch = datetime.datetime(1970,1,1)
 year = int(sys.argv[1])
 
+print 'year: ' + sys.argv[1]
+hours = sys.argv[2].split('-')[1]
+print 'hours: ' + hours
+
 time1 = datetime.datetime(year, 1, 1, 0, 0)
 time1 = int((time1 - epoch).total_seconds())
-if int(sys.argv[2]) == 24:
+if int(hours) == 24:
     time2 = datetime.datetime(year, 1, 2, 0, 0)
 else:
-    time2 = datetime.datetime(year, 1, 1, int(sys.argv[2]), 0)
+    time2 = datetime.datetime(year, 1, 1, int(hours), 0)
 time2 = int((time2 - epoch).total_seconds())
 
 stream.add_filter('record-type', 'ribs')
 stream.add_filter('collector', 'rrc11')
-#stream.add_filter('project', 'ris')
-#stream.add_filter('project', 'routeviews')
+stream.add_filter('project', 'ris')
+stream.add_filter('project', 'routeviews')
 
 stream.add_interval_filter(time1,time2)
 stream.start()
@@ -49,7 +53,7 @@ while(stream.get_next_record(rec)):
             elem = rec.get_next_elem()
 
 end = time.time()
-output = 'duration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(end-start)
+output = 'year: ' + year + '\nduration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(end-start)
 
 f = open('time_count-' + str(sys.argv[1]) + '.dat', 'w')
 f.write(output)
