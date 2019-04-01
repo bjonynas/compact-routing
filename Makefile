@@ -9,7 +9,7 @@ TIME_COUNT_STATS = results/time-count-2019-0.dat \
 					results/time-count-2019-6.dat \
 					results/time-count-2019-7.dat \
 					results/time-count-2019-8.dat \
-					results/time-count-2019-9.da \
+					results/time-count-2019-9.dat \
 					results/time-count-2019-10.dat \
 					results/time-count-2019-11.dat \
 					results/time-count-2019-12.dat \
@@ -34,7 +34,7 @@ TIME_COUNT_STATS = results/time-count-2019-0.dat \
 					results/time-count-2008-6.dat \
 					results/time-count-2008-7.dat \
 					results/time-count-2008-8.dat \
-					results/time-count-2008-9.da \
+					results/time-count-2008-9.dat \
 					results/time-count-2008-10.dat \
 					results/time-count-2008-11.dat \
 					results/time-count-2008-12.dat \
@@ -59,7 +59,7 @@ TIME_COUNT_STATS = results/time-count-2019-0.dat \
 					results/time-count-2001-6.dat \
 					results/time-count-2001-7.dat \
 					results/time-count-2001-8.dat \
-					results/time-count-2001-9.da \
+					results/time-count-2001-9.dat \
 					results/time-count-2001-10.dat \
 					results/time-count-2001-11.dat \
 					results/time-count-2001-12.dat \

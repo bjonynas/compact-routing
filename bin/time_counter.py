@@ -13,9 +13,7 @@ graph = nx.DiGraph()
 epoch = datetime.datetime(1970,1,1)
 year = int(sys.argv[1])
 
-print 'year: ' + sys.argv[1]
 hours = sys.argv[2].split('-')[1]
-print 'hours: ' + hours
 
 time1 = datetime.datetime(year, 1, 1, 0, 0)
 time1 = int((time1 - epoch).total_seconds())
