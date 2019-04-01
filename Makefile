@@ -24,7 +24,7 @@ TIME_COUNT_STATS = results/time-count-0.dat \
 					results/time-count-21.dat \
 					results/time-count-22.dat \
 					results/time-count-23.dat \
-					results/time-count-24.dat \
+					results/time-count-24.dat 
 
 DATA_ALL = results/stage1/data-all-2019.dat \
 			results/stage1/data-all-2018.dat \
@@ -45,7 +45,7 @@ DATA_ALL = results/stage1/data-all-2019.dat \
 			results/stage1/data-all-2003.dat \
 			results/stage1/data-all-2002.dat \
 			results/stage1/data-all-2001.dat \
-			results/stage1/data-all-2000.dat \
+			results/stage1/data-all-2000.dat
 
 DATA_OLDEST = results/stage1/data-oldest-2019.dat \
 				results/stage1/data-oldest-2018.dat \
@@ -66,48 +66,48 @@ DATA_OLDEST = results/stage1/data-oldest-2019.dat \
 				results/stage1/data-oldest-2003.dat \
 				results/stage1/data-oldest-2002.dat \
 				results/stage1/data-oldest-2001.dat \
-				results/stage1/data-oldest-2000.dat \
+				results/stage1/data-oldest-2000.dat
 
-K_CORES = results/stage2/kcore-all-2019.dat
-			results/stage2/kcore-all-2019.dat
-			results/stage2/kcore-all-2018.dat
-			results/stage2/kcore-all-2017.dat
-			results/stage2/kcore-all-2016.dat
-			results/stage2/kcore-all-2015.dat
-			results/stage2/kcore-all-2014.dat
-			results/stage2/kcore-all-2013.dat
-			results/stage2/kcore-all-2012.dat
-			results/stage2/kcore-all-2011.dat
-			results/stage2/kcore-all-2010.dat
-			results/stage2/kcore-all-2009.dat
-			results/stage2/kcore-all-2008.dat
-			results/stage2/kcore-all-2007.dat
-			results/stage2/kcore-all-2006.dat
-			results/stage2/kcore-all-2005.dat
-			results/stage2/kcore-all-2004.dat
-			results/stage2/kcore-all-2003.dat
-			results/stage2/kcore-all-2002.dat
-			results/stage2/kcore-all-2001.dat
-			results/stage2/kcore-all-2000.dat
-			results/stage2/kcore-oldest-2019.dat
-			results/stage2/kcore-oldest-2018.dat
-			results/stage2/kcore-oldest-2017.dat
-			results/stage2/kcore-oldest-2016.dat
-			results/stage2/kcore-oldest-2015.dat
-			results/stage2/kcore-oldest-2014.dat
-			results/stage2/kcore-oldest-2013.dat
-			results/stage2/kcore-oldest-2012.dat
-			results/stage2/kcore-oldest-2011.dat
-			results/stage2/kcore-oldest-2010.dat
-			results/stage2/kcore-oldest-2009.dat
-			results/stage2/kcore-oldest-2008.dat
-			results/stage2/kcore-oldest-2007.dat
-			results/stage2/kcore-oldest-2006.dat
-			results/stage2/kcore-oldest-2005.dat
-			results/stage2/kcore-oldest-2004.dat
-			results/stage2/kcore-oldest-2003.dat
-			results/stage2/kcore-oldest-2002.dat
-			results/stage2/kcore-oldest-2001.dat
+K_CORES = results/stage2/kcore-all-2019.dat \
+			results/stage2/kcore-all-2019.dat \
+			results/stage2/kcore-all-2018.dat \
+			results/stage2/kcore-all-2017.dat \
+			results/stage2/kcore-all-2016.dat \
+			results/stage2/kcore-all-2015.dat \
+			results/stage2/kcore-all-2014.dat \
+			results/stage2/kcore-all-2013.dat \
+			results/stage2/kcore-all-2012.dat \
+			results/stage2/kcore-all-2011.dat \
+			results/stage2/kcore-all-2010.dat \
+			results/stage2/kcore-all-2009.dat \
+			results/stage2/kcore-all-2008.dat \
+			results/stage2/kcore-all-2007.dat \
+			results/stage2/kcore-all-2006.dat \
+			results/stage2/kcore-all-2005.dat \
+			results/stage2/kcore-all-2004.dat \
+			results/stage2/kcore-all-2003.dat \
+			results/stage2/kcore-all-2002.dat \
+			results/stage2/kcore-all-2001.dat \
+			results/stage2/kcore-all-2000.dat \
+			results/stage2/kcore-oldest-2019.dat \
+			results/stage2/kcore-oldest-2018.dat \
+			results/stage2/kcore-oldest-2017.dat \
+			results/stage2/kcore-oldest-2016.dat \
+			results/stage2/kcore-oldest-2015.dat \
+			results/stage2/kcore-oldest-2014.dat \
+			results/stage2/kcore-oldest-2013.dat \
+			results/stage2/kcore-oldest-2012.dat \
+			results/stage2/kcore-oldest-2011.dat \
+			results/stage2/kcore-oldest-2010.dat \
+			results/stage2/kcore-oldest-2009.dat \
+			results/stage2/kcore-oldest-2008.dat \
+			results/stage2/kcore-oldest-2007.dat \
+			results/stage2/kcore-oldest-2006.dat \
+			results/stage2/kcore-oldest-2005.dat \
+			results/stage2/kcore-oldest-2004.dat \
+			results/stage2/kcore-oldest-2003.dat \
+			results/stage2/kcore-oldest-2002.dat \
+			results/stage2/kcore-oldest-2001.dat \
 			results/stage2/kcore-oldest-2000.dat
 
 all: $(K_CORES)
