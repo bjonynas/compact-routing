@@ -11,10 +11,14 @@ rec = BGPRecord()
 graph = nx.DiGraph()
 
 epoch = datetime.datetime(1970,1,1)
+year = int(sys.argv[1])
 
-time1 = datetime.datetime(2019, 1, 1, 0, 0)
+time1 = datetime.datetime(year, 1, 1, 0, 0)
 time1 = int((time1 - epoch).total_seconds())
-time2 = datetime.datetime(2019, 1, 1, int(sys.argv[1]), 0)
+if int(sys.argv[2]) == 24:
+    time2 = datetime.datetime(year, 1, 2, 0, 0)
+else:
+    time2 = datetime.datetime(year, 1, 1, int(sys.argv[2]), 0)
 time2 = int((time2 - epoch).total_seconds())
 
 stream.add_filter('record-type', 'ribs')
