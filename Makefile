@@ -110,16 +110,16 @@ K_CORES = results/stage2/kcore-all-2019.dat \
 			results/stage2/kcore-oldest-2001.dat \
 			results/stage2/kcore-oldest-2000.dat
 
-all: $(K_CORES)
+all: results/time-count.dat $(K_CORES)
 
 
 #-------------------------------------Stage 1-------------------------------------#
 
-#results/time-count.dat: $(TIME_COUNT_STATS)
-#	cat $^ > $@
+results/time-count.dat: $(TIME_COUNT_STATS)
+	cat $^ > $@
 
-#esults/time-count-%.dat: bin/collector_counter.py
-#	python bin/time_counter.py $(patsubst results/time-count-%.dat,%,$@)
+results/time-count-%.dat: bin/collector_counter.py
+	python bin/time_counter.py $(patsubst results/time-count-%.dat,%,$@)
 
 results/stage1/data-all-2019.dat: bin/get_data_all.py
 	python2.7 bin/get_data_all.py 2019

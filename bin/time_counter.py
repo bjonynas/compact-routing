@@ -10,13 +10,17 @@ stream = BGPStream()
 rec = BGPRecord()
 graph = nx.DiGraph()
 
+epoch = datetime.datetime(1970,1,1)
+
 time1 = datetime.datetime(2019, 1, 1, 0, 0)
+time1 = int((time1 - epoch).total_seconds())
 time2 = datetime.datetime(2019, 1, 1, int(sys.argv[1]), 0)
+time2 = int((time2 - epoch).total_seconds())
 
 stream.add_filter('record-type', 'ribs')
-#stream.add_filter('collector', 'rrc11')
-stream.add_filter('project', 'ris')
-stream.add_filter('project', 'routeviews')
+stream.add_filter('collector', 'rrc11')
+#stream.add_filter('project', 'ris')
+#stream.add_filter('project', 'routeviews')
 
 stream.add_interval_filter(time1,time2)
 stream.start()
