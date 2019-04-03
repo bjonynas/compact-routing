@@ -167,11 +167,11 @@ all: results/time-count.dat $(K_CORES)
 results/time-count.dat: $(TIME_COUNT_STATS)
 	cat $^ > $@
 
-results/time-count-2019-%.dat: bin/collector_counter.py
+results/time-count-2019-%.dat: bin/time_counter.py
 	python2.7 bin/time_counter.py 2019 $(patsubst results/time-count-%.dat,%,$@)
-results/time-count-2008-%.dat: bin/collector_counter.py
+results/time-count-2008-%.dat: bin/time_counter.py
 	python2.7 bin/time_counter.py 2008 $(patsubst results/time-count-%.dat,%,$@)
-results/time-count-2001-%.dat: bin/collector_counter.py
+results/time-count-2001-%.dat: bin/time_counter.py
 	python2.7 bin/time_counter.py 2001 $(patsubst results/time-count-%.dat,%,$@)
 
 results/stage1/data-all-2019.dat: bin/get_data_all.py

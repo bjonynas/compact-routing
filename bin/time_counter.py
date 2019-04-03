@@ -8,7 +8,7 @@ start = time.time()
 
 stream = BGPStream()
 rec = BGPRecord()
-graph = nx.DiGraph()
+graph = nx.Graph()
 
 epoch = datetime.datetime(1970,1,1)
 year = int(sys.argv[1])
@@ -51,7 +51,7 @@ while(stream.get_next_record(rec)):
             elem = rec.get_next_elem()
 
 end = time.time()
-output = 'year: ' + year + '\nduration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(end-start)
+output = 'year: ' + str(year) + '\nduration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(end-start)
 
 f = open('time_count-' + str(sys.argv[1]) + '.dat', 'w')
 f.write(output)

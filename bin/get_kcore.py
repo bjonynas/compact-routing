@@ -2,7 +2,7 @@ import networkx as nx
 import sys
 import os
 
-graph = nx.DiGraph()
+graph = nx.Graph()
 filename = sys.argv[1]
 sourceFile = open('./results/stage1/' + filename, 'r')
 

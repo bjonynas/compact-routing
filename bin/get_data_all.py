@@ -9,7 +9,7 @@ start = time.time()
 
 stream = BGPStream()
 rec = BGPRecord()
-graph = nx.DiGraph()
+graph = nx.Graph()
 setNodes = []
 
 epoch = datetime.datetime(1970,1,1)
