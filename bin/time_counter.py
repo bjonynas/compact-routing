@@ -2,6 +2,7 @@ import networkx as nx
 import time
 import sys
 import datetime
+import os
 from _pybgpstream import BGPStream, BGPRecord, BGPElem
 
 start = time.time()
@@ -53,6 +54,9 @@ while(stream.get_next_record(rec)):
 end = time.time()
 output = 'year: ' + str(year) + '\nduration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(end-start)
 
-f = open('time_count-' + str(sys.argv[1]) + '.dat', 'w')
+if not os.path.exists('./results/stage1'):
+    os.makedirs('./results/stage1')
+
+f = open('./results/stage1/time_count-' + str(sys.argv[2]) + '.dat', 'w')
 f.write(output)
 f.close()
