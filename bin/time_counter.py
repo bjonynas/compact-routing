@@ -52,7 +52,7 @@ while(stream.get_next_record(rec)):
             elem = rec.get_next_elem()
 
 end = time.time()
-output = 'year: ' + str(year) + '\nduration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(end-start)
+output = 'year: ' + str(year) + '\nduration: ' + str(int(time2) - int(time1)) + '\nnumber of nodes: ' + str(graph.number_of_nodes()) + '\nnumber of edges: ' + str(graph.number_of_edges()) +'\nruntime: ' + str(int(end-start))
 
 if not os.path.exists('./results/stage1'):
     os.makedirs('./results/stage1')

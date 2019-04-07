@@ -12,7 +12,6 @@ TIME_COUNT_STATS = results/time-count-2019-0.dat \
 					results/time-count-2019-9.dat \
 					results/time-count-2019-11.dat \
 					results/time-count-2019-12.dat \
-					results/time-count-2019-13.dat \
 					results/time-count-2019-14.dat \
 					results/time-count-2019-15.dat \
 					results/time-count-2019-16.dat \
