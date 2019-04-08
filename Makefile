@@ -1,5 +1,3 @@
-.DELETE_ON_ERROR:
-
 TIME_COUNT_STATS = results/time-count-2019-0.dat \
 					results/time-count-2019-1.dat \
 					results/time-count-2019-2.dat \
