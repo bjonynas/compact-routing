@@ -57,6 +57,6 @@ output = 'year: ' + str(year) + '\nduration: ' + str(int(time2) - int(time1)) + 
 if not os.path.exists('./results/stage1'):
     os.makedirs('./results/stage1')
 
-f = open('./results/stage1/time_count-' + str(sys.argv[2]) + '.dat', 'w')
+f = open('./results/stage1/time-count-' + str(sys.argv[2]) + '.dat', 'w')
 f.write(output)
 f.close()
