@@ -78,10 +78,10 @@ for nodeId in graph.nodes:
             destination = graph.nodes[destinationId]
 
             #TODO its distance to any landmark
-            landmarkDistance = node.table[landmarkSet[0]].distance
+            landmarkDistance = len(node['paths'][landmarkSet[0]])
             for landmark in landmarkSet:
                 if node.table[landmark].distance < landmarkDistance:
-                    landmarkDistance = node.table[landmark].distance
+                    landmarkDistance = len(node['paths'][landmark])
 
             path = nx.algorithms.shortest_paths.shortest_path(graph, nodeId, destinationId)
 
