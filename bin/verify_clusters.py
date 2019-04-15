@@ -57,19 +57,18 @@ for node in graph.nodes:
         path = nx.algorithms.shortest_paths.shortest_path(graph, node, landmark)
         paths[landmark] = path    
     graph.nodes[node]['paths'] = paths.copy()
+    #
+    # #assign each node to its closest landmark
+    # if node not in landmarkSet:
+    #     min = paths.keys()[0]
+    #     for path in paths.keys():
+    #         if len(paths[path]) < len(min):
+    #             min = path
+    #     graph.nodes[node]['assignedLandmark'] = min
+    # else:
+    #     graph.nodes[node]['assignedLandmark'] = node
 
-    #assign each node to its closest landmark
-    if node not in landmarkSet:
-        min = paths.keys()[0]
-        for path in paths.keys():
-            if len(paths[path]) < len(min):
-                min = path
-        graph.nodes[node]['assignedLandmark'] = min
-    else:
-        graph.nodes[node]['assignedLandmark'] = node
-
-#add destinations to the cluster for each node if the path to the destination is shorter through the node
-#compared to routing through the destination's landmark
+#add a destination node to a node's cluster if the path to the destination is shorter than to any landmark node
 for nodeId in graph.nodes:
     node = graph.nodes[nodeId]
     cluster = {}
@@ -77,21 +76,24 @@ for nodeId in graph.nodes:
     for destinationId in graph.nodes:
         if nodeId != destinationId:
             destination = graph.nodes[destinationId]
-            destLandmark = destination['assignedLandmark']
 
-            distanceViaLandmark = len(node['paths'][destLandmark]) + len(destination['paths'][destLandmark]) -1
+            #TODO its distance to any landmark
+            landmarkDistance = node.table[landmarkSet[0]].distance
+            for landmark in landmarkSet:
+                if node.table[landmark].distance < landmarkDistance:
+                    landmarkDistance = node.table[landmark].distance
+
             path = nx.algorithms.shortest_paths.shortest_path(graph, nodeId, destinationId)
 
-            if len(path) < distanceViaLandmark:
+            if len(path) < landmarkDistance:
                 cluster[destinationId] = path[1]
-            else:
-                1 + 1
     graph.nodes[nodeId]['cluster'] = cluster
 
 #check that all clusters are under the limit of 4 * sqrt(n log n)
 violations = 0
 n = graph.number_of_nodes()
-limit = 4*math.sqrt(math.log(n, n))
+
+limit = 4*math.sqrt(n * math.log(n))
 
 for nodeId in graph.nodes:
     if len(graph.nodes[nodeId]['cluster']) > limit:

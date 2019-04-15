@@ -1,74 +1,3 @@
-TIME_COUNT_STATS = results/time-count-2019-0.dat \
-					results/time-count-2019-1.dat \
-					results/time-count-2019-2.dat \
-					results/time-count-2019-3.dat \
-					results/time-count-2019-4.dat \
-					results/time-count-2019-5.dat \
-					results/time-count-2019-6.dat \
-					results/time-count-2019-7.dat \
-					results/time-count-2019-8.dat \
-					results/time-count-2019-9.dat \
-					results/time-count-2019-11.dat \
-					results/time-count-2019-12.dat \
-					results/time-count-2019-14.dat \
-					results/time-count-2019-15.dat \
-					results/time-count-2019-16.dat \
-					results/time-count-2019-17.dat \
-					results/time-count-2019-18.dat \
-					results/time-count-2019-19.dat \
-					results/time-count-2019-20.dat \
-					results/time-count-2019-21.dat \
-					results/time-count-2019-22.dat \
-					results/time-count-2019-23.dat \
-					results/time-count-2008-0.dat \
-					results/time-count-2008-1.dat \
-					results/time-count-2008-2.dat \
-					results/time-count-2008-3.dat \
-					results/time-count-2008-4.dat \
-					results/time-count-2008-5.dat \
-					results/time-count-2008-6.dat \
-					results/time-count-2008-7.dat \
-					results/time-count-2008-8.dat \
-					results/time-count-2008-9.dat \
-					results/time-count-2008-10.dat \
-					results/time-count-2008-11.dat \
-					results/time-count-2008-12.dat \
-					results/time-count-2008-13.dat \
-					results/time-count-2008-14.dat \
-					results/time-count-2008-15.dat \
-					results/time-count-2008-16.dat \
-					results/time-count-2008-17.dat \
-					results/time-count-2008-18.dat \
-					results/time-count-2008-19.dat \
-					results/time-count-2008-20.dat \
-					results/time-count-2008-21.dat \
-					results/time-count-2008-22.dat \
-					results/time-count-2008-23.dat \
-					results/time-count-2001-0.dat \
-					results/time-count-2001-1.dat \
-					results/time-count-2001-2.dat \
-					results/time-count-2001-3.dat \
-					results/time-count-2001-4.dat \
-					results/time-count-2001-5.dat \
-					results/time-count-2001-6.dat \
-					results/time-count-2001-7.dat \
-					results/time-count-2001-8.dat \
-					results/time-count-2001-9.dat \
-					results/time-count-2001-10.dat \
-					results/time-count-2001-11.dat \
-					results/time-count-2001-12.dat \
-					results/time-count-2001-13.dat \
-					results/time-count-2001-14.dat \
-					results/time-count-2001-15.dat \
-					results/time-count-2001-16.dat \
-					results/time-count-2001-17.dat \
-					results/time-count-2001-18.dat \
-					results/time-count-2001-19.dat \
-					results/time-count-2001-20.dat \
-					results/time-count-2001-21.dat \
-					results/time-count-2001-22.dat \
-					results/time-count-2001-23.dat \
-
 DATA_ALL = results/stage1/data-all-2019.dat \
 			results/stage1/data-all-2018.dat \
 			results/stage1/data-all-2017.dat \
@@ -191,16 +120,6 @@ CLUSTERS = results/stage3/cluster-all-2001.dat \
 all: $(CLUSTERS)
 
 #-------------------------------------Stage 1-------------------------------------#
-
-#results/time-count.dat: $(TIME_COUNT_STATS)
-#	cat $^ > $@
-
-#results/time-count-2019-%.dat: bin/time_counter.py
-#	python2.7 bin/time_counter.py 2019 $(patsubst results/time-count-%.dat,%,$@)
-#results/time-count-2008-%.dat: bin/time_counter.py
-#	python2.7 bin/time_counter.py 2008 $(patsubst results/time-count-%.dat,%,$@)
-#results/time-count-2001-%.dat: bin/time_counter.py
-#	python2.7 bin/time_counter.py 2001 $(patsubst results/time-count-%.dat,%,$@)
 
 results/stage1/data-all-2019.dat: bin/get_data_all.py
 	python2.7 bin/get_data_all.py 2019
