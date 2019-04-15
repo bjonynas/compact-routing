@@ -51,12 +51,14 @@ dataFile.close()
 print 'graph imported'
 
 for node in graph.nodes:
+    #calculate the shortest path to all landmarks
     paths = {}
     for landmark in landmarkSet:
         path = nx.algorithms.shortest_paths.shortest_path(graph, node, landmark)
         paths[landmark] = path    
     graph.nodes[node]['paths'] = paths.copy()
 
+    #assign each node to its closest landmark
     if node not in landmarkSet:
         min = paths.keys()[0]
         for path in paths.keys():
@@ -66,6 +68,8 @@ for node in graph.nodes:
     else:
         graph.nodes[node]['assignedLandmark'] = node
 
+#add destinations to the cluster for each node if the path to the destination is shorter through the node
+#compared to routing through the destination's landmark
 for nodeId in graph.nodes:
     node = graph.nodes[nodeId]
     cluster = {}
@@ -75,12 +79,13 @@ for nodeId in graph.nodes:
             destination = graph.nodes[destinationId]
             destLandmark = destination['assignedLandmark']
 
-            distanceViaLandmark = len(node['paths'][destLandmark]) + len(destination['paths'][destLandmark])
+            distanceViaLandmark = len(node['paths'][destLandmark]) + len(destination['paths'][destLandmark]) -1
             path = nx.algorithms.shortest_paths.shortest_path(graph, nodeId, destinationId)
 
             if len(path) < distanceViaLandmark:
                 cluster[destinationId] = path[1]
-
+            else:
+                1 + 1
     graph.nodes[nodeId]['cluster'] = cluster
 
 #check that all clusters are under the limit of 4 * sqrt(n log n)
