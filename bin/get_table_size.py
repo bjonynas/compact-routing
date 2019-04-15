@@ -14,7 +14,7 @@ year = sys.argv[1]
 time1 = datetime.datetime(int(year), 1, 1, 0, 0)
 time1 = int((time1 - epoch).total_seconds())
 #time2 is 1am of January 1st of the year specified in command line
-time2 = datetime.datetime(int(year), 1, 1, 0, 0)
+time2 = datetime.datetime(int(year), 1, 1, 8, 0)
 time2 = int((time2 - epoch).total_seconds())
 
 stream.add_filter('record-type', 'ribs')
@@ -31,9 +31,10 @@ while (stream.get_next_record(rec)):
     else:
         elem = rec.get_next_elem()
         while(elem):
-            if elem.collector not in ribCounts.keys():
-                ribCounts[elem.collector] = 0
-            ribCounts[elem.collector] = ribCounts[elem.collector] + 1
+            if rec.collector not in ribCounts.keys():
+                ribCounts[rec.collector] = 0
+            ribCounts[rec.collector] = ribCounts[rec.collector] + 1
+            elem = rec.get_next_elem()
 
 for key in ribCounts.keys():
-    print 'rib: ' + key + ', entries: ' + ribCounts[key]
+    print 'rib: ' + str(key) + ', entries: ' + str(ribCounts[key])
