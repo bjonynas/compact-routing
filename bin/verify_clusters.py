@@ -57,16 +57,6 @@ for node in graph.nodes:
         path = nx.algorithms.shortest_paths.shortest_path(graph, node, landmark)
         paths[landmark] = path    
     graph.nodes[node]['paths'] = paths.copy()
-    #
-    # #assign each node to its closest landmark
-    # if node not in landmarkSet:
-    #     min = paths.keys()[0]
-    #     for path in paths.keys():
-    #         if len(paths[path]) < len(min):
-    #             min = path
-    #     graph.nodes[node]['assignedLandmark'] = min
-    # else:
-    #     graph.nodes[node]['assignedLandmark'] = node
 
 #add a destination node to a node's cluster if the path to the destination is shorter than to any landmark node
 for nodeId in graph.nodes:
@@ -77,16 +67,10 @@ for nodeId in graph.nodes:
         if nodeId != destinationId:
             destination = graph.nodes[destinationId]
 
-            #TODO its distance to any landmark
-            landmarkDistance = len(node['paths'][landmarkSet[0]])
-            for landmark in landmarkSet:
-                if len(node['paths'][landmark]) < landmarkDistance:
-                    landmarkDistance = len(node['paths'][landmark])
-
             path = nx.algorithms.shortest_paths.shortest_path(graph, nodeId, destinationId)
-
-            if len(path) < landmarkDistance:
-                cluster[destinationId] = path[1]
+            for landmark in landmarkSet:
+                if len(path) < len(node['paths'][landmark]):
+                    cluster[destinationId] = path[1]
     graph.nodes[nodeId]['cluster'] = cluster
 
 #check that all clusters are under the limit of 4 * sqrt(n log n)
