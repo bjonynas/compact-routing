@@ -2,7 +2,7 @@ import networkx as nx
 import sys
 import time
 import datetime
-from _pybgpstream import BGPStream, BGPRecord,
+from _pybgpstream import BGPStream, BGPRecord
 import os
 
 start = time.time()
