@@ -360,8 +360,6 @@ results/stage3/cluster-oldest-2019.dat: results/stage1/data-oldest-2019.dat resu
 #--------------------------------------------------------------------------#
 
 clean:
-	rm $(TIME_COUNT_STATS)
-	rm results/time-count.dat
 
 	rm $(DATA_ALL)
 	rm $(DATA_OLDEST)
