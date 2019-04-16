@@ -55,7 +55,7 @@ for node in graph.nodes:
     paths = {}
     for landmark in landmarkSet:
         path = nx.algorithms.shortest_paths.shortest_path(graph, node, landmark)
-        paths[landmark] = path    
+        paths[landmark] = path
     graph.nodes[node]['paths'] = paths.copy()
 
 #add a destination node to a node's cluster if the path to the destination is shorter than to any landmark node
@@ -92,7 +92,6 @@ saveFile.write('violations: ' + str(violations) + '\n')
 for nodeId in graph.nodes:
     node = graph.nodes[nodeId]
     saveFile.write(nodeId + '\n')
-    saveFile.write(node['assignedLandmark'] + '\n')
 
     for destId in node['cluster'].keys():
         saveFile.write(destId + ', ' + node['cluster'][destId] + '\n')
