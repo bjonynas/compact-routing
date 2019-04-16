@@ -100,4 +100,4 @@ for nodeId in graph.nodes:
 saveFile.close()
 
 end = time.time()
-print 'runtime for ' + sys.argv[1] + ': ' + str(int(end - start))
+print 'runtime for individual nodes ' + sys.argv[1] + ': ' + str(int(end - start))
