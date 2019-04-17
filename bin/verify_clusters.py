@@ -20,7 +20,6 @@ while(line != ''):
     line = landmarkFile.readline()
 
 landmarkFile.close()
-print 'landmarks imported'
 
 #import graph from the data file and set up the correct landmark nodes
 graph = nx.Graph()
@@ -48,32 +47,24 @@ while line != '':
     line = dataFile.readline()
 
 dataFile.close()
-print 'graph imported'
 
-for node in graph.nodes:
-    #calculate the shortest path to all landmarks
-    paths = {}
-    for landmark in landmarkSet:
-        path = nx.algorithms.shortest_paths.shortest_path(graph, node, landmark)
-        paths[landmark] = path
-    graph.nodes[node]['paths'] = paths.copy()
+#calculate all shortest paths in the graph
+paths = nx.algorithms.shortest_paths.generic.shortest_path(graph)
 
 #add a destination node to a node's cluster if the path to the destination is shorter than to any landmark node
-for nodeId in graph.nodes:
-    node = graph.nodes[nodeId]
+for node in graph.nodes:
     cluster = {}
 
-    for destinationId in graph.nodes:
-        if nodeId != destinationId:
-            destination = graph.nodes[destinationId]
+    for destination in graph.nodes:
+        if node != destination:
 
-            path = nx.algorithms.shortest_paths.shortest_path(graph, nodeId, destinationId)
             for landmark in landmarkSet:
-                if len(path) < len(node['paths'][landmark]):
-                    cluster[destinationId] = path[1]
-    graph.nodes[nodeId]['cluster'] = cluster
+                destPath = paths[node][destination]
+                if len(destPath) < len(paths[node][landmark]):
+                    cluster[destination] = destPath
+    graph.nodes[node]['cluster'] = cluster
 
-#check that all clusters are under the limit of 4 * sqrt(n log n)
+#check that all clusters are under the size limit of 4 * sqrt(n log n)
 violations = 0
 n = graph.number_of_nodes()
 
@@ -94,10 +85,10 @@ for nodeId in graph.nodes:
     saveFile.write(nodeId + '\n')
 
     for destId in node['cluster'].keys():
-        saveFile.write(destId + ', ' + node['cluster'][destId] + '\n')
+        saveFile.write(destId + ', ' + node['cluster'][destId][0] + '\n')
     saveFile.write('\n')
 
 saveFile.close()
 
 end = time.time()
-print 'runtime for individual nodes ' + sys.argv[1] + ': ' + str(int(end - start))
+print 'runtime for all paths first ' + sys.argv[1] + ': ' + str(int(end - start))
