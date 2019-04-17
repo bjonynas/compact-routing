@@ -87,7 +87,7 @@ for nodeId in graph.nodes:
     saveFile.write(nodeId + '\n')
 
     for destId in node['cluster'].keys():
-        saveFile.write(destId + ', ' + node['cluster'][destId] + '\n')
+        saveFile.write(destId + ', ' + node['cluster'][destId][0] + '\n')
     saveFile.write('\n')
 
 saveFile.close()
