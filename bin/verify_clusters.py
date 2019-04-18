@@ -51,6 +51,10 @@ dataFile.close()
 #calculate all shortest paths in the graph
 paths = nx.algorithms.shortest_paths.generic.shortest_path(graph)
 
+pathLenTotal = 0
+numPaths = 0
+pathLenFreq = {}
+
 #add a destination node to a node's cluster if the path to the destination is shorter than to any landmark node
 for node in graph.nodes:
     cluster = {}
@@ -58,20 +62,29 @@ for node in graph.nodes:
     for destination in graph.nodes:
         if node != destination:
 
+            destPath = paths[destination][node]
+            pathLenTotal = pathLenTotal + len(destPath)
+            numPaths = numPaths + 1
+            if len(destPath) not in pathLenFreq.keys():
+                pathLenFreq[len(destPath)] = 1
+            else:
+                pathLenFreq[len(destPath)] = pathLenFreq[len(destPath)] + 1
+
             for landmark in landmarkSet:
-                destPath = paths[node][destination]
-                if len(destPath) < len(paths[node][landmark]):
-                    cluster[destination] = destPath
+                if len(destPath) < len(paths[destination][landmark]):
+                    cluster[destination] = [destPath[0], destPath[1]]
     graph.nodes[node]['cluster'] = cluster
 
 #check that all clusters are under the size limit of 4 * sqrt(n log n)
 violations = 0
+vioNodes = []
 n = graph.number_of_nodes()
 
 limit = 4*math.sqrt(n * math.log(n))
 
 for nodeId in graph.nodes:
     if len(graph.nodes[nodeId]['cluster']) > limit:
+        vioNodes.append(nodeId)
         violations = violations + 1
 
 if not os.path.exists('./results/stage3'):
@@ -79,7 +92,44 @@ if not os.path.exists('./results/stage3'):
 
 saveFile = open('results/stage3/cluster-' + sys.argv[1] + '.dat', 'w+')
 saveFile.write('violations: ' + str(violations) + '\n')
+saveFile.close()
 
+print pathLenFreq
+
+pathFile = open('results/stage3/path-data-' + sys.argv[1] + '.dat', 'w+')
+pathFile.write('average path length: ' + str(pathLenTotal / numPaths))
+for length in pathLenFreq.keys():
+    pathFile.write(str(length) + ' ' + str(pathLenFreq[length]))
+pathFile.close()
+
+#calculate final cluster size
+numRuns = 1
+while violations > 0:
+    numRuns = numRuns + 1
+    for v in vioNodes:
+        landmarkSet.append(vioNodes[v])
+    violations = 0
+    vioNodes = []
+
+    for node in graph.nodes:
+        cluster = {}
+
+        for destination in graph.nodes:
+            if node != destination:
+                destPath = paths[destination][node]
+                for landmark in landmarkSet:
+                    if len(destPath) < len(paths[destination][landmark]):
+                        cluster[destination] = [destPath[0], destPath[1]]
+        graph.nodes[node]['cluster'] = cluster
+
+    for nodeId in graph.nodes:
+        if len(graph.nodes[nodeId]['cluster']) > limit:
+            vioNodes.append(nodeId)
+            violations = violations + 1
+
+    print sys.argv[1] + ' run: ' + numRuns + ', violations: ' + violations
+
+saveFile = open('results/stage3/cluster-' + sys.argv[1] + '.dat', 'a')
 for nodeId in graph.nodes:
     node = graph.nodes[nodeId]
     saveFile.write(nodeId + '\n')
@@ -91,4 +141,4 @@ for nodeId in graph.nodes:
 saveFile.close()
 
 end = time.time()
-print 'runtime for all paths first ' + sys.argv[1] + ': ' + str(int(end - start))
+print 'runtime for cluster calculations for ' + sys.argv[1] + ': ' + str(int(end - start))
