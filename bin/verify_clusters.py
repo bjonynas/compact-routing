@@ -102,35 +102,35 @@ pathFile.write('average path length: ' + str(pathLenTotal / numPaths) + '\n')
 for length in pathLenFreq.keys():
     pathFile.write(str(length) + ' ' + str(pathLenFreq[length]) + '\n')
 pathFile.close()
-
-#calculate final cluster size
-numRuns = 1
-while violations > 0:
-    numRuns = numRuns + 1
-    for v in vioNodes:
-        landmarkSet.append(vioNodes[v])
-    violations = 0
-    vioNodes = []
-    totalClusterSize = 0
-
-    for node in graph.nodes:
-        cluster = {}
-
-        for destination in graph.nodes:
-            if node != destination:
-                destPath = paths[destination][node]
-                for landmark in landmarkSet:
-                    if len(destPath) < len(paths[destination][landmark]):
-                        cluster[destination] = [destPath[0], destPath[1]]
-        graph.nodes[node]['cluster'] = cluster
-
-    for nodeId in graph.nodes:
-        totalClusterSize = totalClusterSize + len(graph.nodes[nodeId]['cluster'])
-        if len(graph.nodes[nodeId]['cluster']) > limit:
-            vioNodes.append(nodeId)
-            violations = violations + 1
-
-    print sys.argv[1] + ' run: ' + numRuns + ', violations: ' + violations
+#
+# #calculate final cluster size
+# numRuns = 1
+# while violations > 0:
+#     numRuns = numRuns + 1
+#     for v in vioNodes:
+#         landmarkSet.append(vioNodes[v])
+#     violations = 0
+#     vioNodes = []
+#     totalClusterSize = 0
+#
+#     for node in graph.nodes:
+#         cluster = {}
+#
+#         for destination in graph.nodes:
+#             if node != destination:
+#                 destPath = paths[destination][node]
+#                 for landmark in landmarkSet:
+#                     if len(destPath) < len(paths[destination][landmark]):
+#                         cluster[destination] = [destPath[0], destPath[1]]
+#         graph.nodes[node]['cluster'] = cluster
+#
+#     for nodeId in graph.nodes:
+#         totalClusterSize = totalClusterSize + len(graph.nodes[nodeId]['cluster'])
+#         if len(graph.nodes[nodeId]['cluster']) > limit:
+#             vioNodes.append(nodeId)
+#             violations = violations + 1
+#
+#     print sys.argv[1] + ' run: ' + numRuns + ', violations: ' + violations
 
 saveFile = open('results/stage3/cluster-' + sys.argv[1] + '.dat', 'a')
 saveFile.write('average cluster size: ' + str(totalClusterSize/graph.number_of_nodes()) + '\n')
