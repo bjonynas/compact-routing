@@ -105,43 +105,43 @@ results/stage1/data-all-2001.dat: bin/get_data_all.py
 #-------------------------------------Stage 2-------------------------------------#
 
 results/stage2/kcore-all-2019.dat: results/stage1/data-all-2019.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2019.dat
+	python2.7 bin/get_kcore.py all-2019
 results/stage2/kcore-all-2018.dat: results/stage1/data-all-2018.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2018.dat
+	python2.7 bin/get_kcore.py all-2018
 results/stage2/kcore-all-2017.dat: results/stage1/data-all-2017.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2017.dat
+	python2.7 bin/get_kcore.py all-2017
 results/stage2/kcore-all-2016.dat: results/stage1/data-all-2016.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2016.dat
+	python2.7 bin/get_kcore.py all-2016
 results/stage2/kcore-all-2015.dat: results/stage1/data-all-2015.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2015.dat
+	python2.7 bin/get_kcore.py all-2015
 results/stage2/kcore-all-2014.dat: results/stage1/data-all-2014.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2014.dat
+	python2.7 bin/get_kcore.py all-2014
 results/stage2/kcore-all-2013.dat: results/stage1/data-all-2013.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2013.dat
+	python2.7 bin/get_kcore.py all-2013
 results/stage2/kcore-all-2012.dat: results/stage1/data-all-2012.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2012.dat
+	python2.7 bin/get_kcore.py all-2012
 results/stage2/kcore-all-2011.dat: results/stage1/data-all-2011.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2011.dat
+	python2.7 bin/get_kcore.py all-2011
 results/stage2/kcore-all-2010.dat: results/stage1/data-all-2010.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2010.dat
+	python2.7 bin/get_kcore.py all-2010
 results/stage2/kcore-all-2009.dat: results/stage1/data-all-2009.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2009.dat
+	python2.7 bin/get_kcore.py all-2009
 results/stage2/kcore-all-2008.dat: results/stage1/data-all-2008.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2008.dat
+	python2.7 bin/get_kcore.py all-2008
 results/stage2/kcore-all-2007.dat: results/stage1/data-all-2007.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2007.dat
+	python2.7 bin/get_kcore.py all-2007
 results/stage2/kcore-all-2006.dat: results/stage1/data-all-2006.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2006.dat
+	python2.7 bin/get_kcore.py all-2006
 results/stage2/kcore-all-2005.dat: results/stage1/data-all-2005.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2005.dat
+	python2.7 bin/get_kcore.py all-2005
 results/stage2/kcore-all-2004.dat: results/stage1/data-all-2004.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2004.dat
+	python2.7 bin/get_kcore.py all-2004
 results/stage2/kcore-all-2003.dat: results/stage1/data-all-2003.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2003.dat
+	python2.7 bin/get_kcore.py all-2003
 results/stage2/kcore-all-2002.dat: results/stage1/data-all-2002.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2002.dat
+	python2.7 bin/get_kcore.py all-2002
 results/stage2/kcore-all-2001.dat: results/stage1/data-all-2001.dat bin/get_kcore.py
-	python2.7 bin/get_kcore.py data-all-2001.dat
+	python2.7 bin/get_kcore.py all-2001
 
 #-------------------------------------Stage 3-------------------------------------#
 
