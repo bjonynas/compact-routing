@@ -57,7 +57,7 @@ CLUSTERS = results/stage3/cluster-all-2001.dat \
 			results/stage3/cluster-all-2015.dat \
 			results/stage3/cluster-all-2016.dat \
 			results/stage3/cluster-all-2017.dat \
-			results/stage3/cluster-all-2018.dat 
+			results/stage3/cluster-all-2018.dat
 
 all: $(CLUSTERS)
 
