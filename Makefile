@@ -40,6 +40,7 @@ K_CORES = results/stage2/kcore-all-2019.dat \
 			results/stage2/kcore-all-2001.dat \
 
 CLUSTERS = results/stage3/cluster-all-2001.dat \
+			results/stage3/cluster-all-2019.dat \
 			results/stage3/cluster-all-2002.dat \
 			results/stage3/cluster-all-2003.dat \
 			results/stage3/cluster-all-2004.dat \
@@ -56,8 +57,7 @@ CLUSTERS = results/stage3/cluster-all-2001.dat \
 			results/stage3/cluster-all-2015.dat \
 			results/stage3/cluster-all-2016.dat \
 			results/stage3/cluster-all-2017.dat \
-			results/stage3/cluster-all-2018.dat \
-			results/stage3/cluster-all-2019.dat
+			results/stage3/cluster-all-2018.dat 
 
 all: $(CLUSTERS)
 
