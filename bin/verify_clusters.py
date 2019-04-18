@@ -134,6 +134,7 @@ while violations > 0:
 
 saveFile = open('results/stage3/cluster-' + sys.argv[1] + '.dat', 'a')
 saveFile.write('average cluster size: ' + str(totalClusterSize/graph.number_of_nodes()) + '\n')
+saveFile.write('final landmark set: ' + str(landmarkSet) + '\n')
 for nodeId in graph.nodes:
     node = graph.nodes[nodeId]
     saveFile.write(nodeId + '\n')
