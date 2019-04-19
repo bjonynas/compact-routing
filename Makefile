@@ -38,26 +38,26 @@ DATA_OLDEST = results/stage1/data-oldest-2019.dat \
 				results/stage1/data-oldest-2002.dat \
 				results/stage1/data-oldest-2001.dat
 
-K_SHELLS = results/stage2/kshell-all-2019.dat \
-			results/stage2/kshell-all-2019.dat \
-			results/stage2/kshell-all-2018.dat \
-			results/stage2/kshell-all-2017.dat \
-			results/stage2/kshell-all-2016.dat \
-			results/stage2/kshell-all-2015.dat \
-			results/stage2/kshell-all-2014.dat \
-			results/stage2/kshell-all-2013.dat \
-			results/stage2/kshell-all-2012.dat \
-			results/stage2/kshell-all-2011.dat \
-			results/stage2/kshell-all-2010.dat \
-			results/stage2/kshell-all-2009.dat \
-			results/stage2/kshell-all-2008.dat \
-			results/stage2/kshell-all-2007.dat \
-			results/stage2/kshell-all-2006.dat \
-			results/stage2/kshell-all-2005.dat \
-			results/stage2/kshell-all-2004.dat \
-			results/stage2/kshell-all-2003.dat \
-			results/stage2/kshell-all-2002.dat \
-			results/stage2/kshell-all-2001.dat
+K_SHELLS = results/stage2/kshells-all-2019.dat \
+			results/stage2/kshells-all-2019.dat \
+			results/stage2/kshells-all-2018.dat \
+			results/stage2/kshells-all-2017.dat \
+			results/stage2/kshells-all-2016.dat \
+			results/stage2/kshells-all-2015.dat \
+			results/stage2/kshells-all-2014.dat \
+			results/stage2/kshells-all-2013.dat \
+			results/stage2/kshells-all-2012.dat \
+			results/stage2/kshells-all-2011.dat \
+			results/stage2/kshells-all-2010.dat \
+			results/stage2/kshells-all-2009.dat \
+			results/stage2/kshells-all-2008.dat \
+			results/stage2/kshells-all-2007.dat \
+			results/stage2/kshells-all-2006.dat \
+			results/stage2/kshells-all-2005.dat \
+			results/stage2/kshells-all-2004.dat \
+			results/stage2/kshells-all-2003.dat \
+			results/stage2/kshells-all-2002.dat \
+			results/stage2/kshells-all-2001.dat
 
 SHORTEST_PATHS = results/stage2/shortest-paths-all-2001.dat \
 					results/stage2/shortest-paths-all-2002.dat \
