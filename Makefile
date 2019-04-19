@@ -57,7 +57,27 @@ K_SHELLS = results/stage2/kshell-all-2019.dat \
 			results/stage2/kshell-all-2004.dat \
 			results/stage2/kshell-all-2003.dat \
 			results/stage2/kshell-all-2002.dat \
-			results/stage2/kshell-all-2001.dat \
+			results/stage2/kshell-all-2001.dat
+
+SHORTEST_PATHS = results/stage2/shortest-paths-all-2001.dat \
+					results/stage2/shortest-paths-all-2002.dat \
+					results/stage2/shortest-paths-all-2003.dat \
+					results/stage2/shortest-paths-all-2004.dat \
+					results/stage2/shortest-paths-all-2005.dat \
+					results/stage2/shortest-paths-all-2006.dat \
+					results/stage2/shortest-paths-all-2007.dat \
+					results/stage2/shortest-paths-all-2008.dat \
+					results/stage2/shortest-paths-all-2009.dat \
+					results/stage2/shortest-paths-all-2010.dat \
+					results/stage2/shortest-paths-all-2011.dat \
+					results/stage2/shortest-paths-all-2012.dat \
+					results/stage2/shortest-paths-all-2013.dat \
+					results/stage2/shortest-paths-all-2014.dat \
+					results/stage2/shortest-paths-all-2015.dat \
+					results/stage2/shortest-paths-all-2016.dat \
+					results/stage2/shortest-paths-all-2017.dat \
+					results/stage2/shortest-paths-all-2018.dat \
+					results/stage2/shortest-paths-all-2019.dat \
 
 CLUSTERS = results/stage3/cluster-all-2001.dat \
 			results/stage3/cluster-all-2019.dat \
@@ -200,6 +220,45 @@ results/stage2/kshells-all-2002.dat: results/stage1/data-all-2002.dat bin/calcul
 	python2.7 bin/calculate_kshells.py all-2002
 results/stage2/kshells-all-2001.dat: results/stage1/data-all-2001.dat bin/calculate_kshells.py
 	python2.7 bin/calculate_kshells.py all-2001
+
+results/stage2/shortest-paths-all-2001.dat: results/stage1/data-all-2001.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2001
+results/stage2/shortest-paths-all-2002.dat: results/stage1/data-all-2002.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2002
+results/stage2/shortest-paths-all-2003.dat: results/stage1/data-all-2003.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2003
+results/stage2/shortest-paths-all-2004.dat: results/stage1/data-all-2004.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2004
+results/stage2/shortest-paths-all-2005.dat: results/stage1/data-all-2005.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2005
+results/stage2/shortest-paths-all-2006.dat: results/stage1/data-all-2006.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2006
+results/stage2/shortest-paths-all-2007.dat: results/stage1/data-all-2007.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2007
+results/stage2/shortest-paths-all-2008.dat: results/stage1/data-all-2008.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2008
+results/stage2/shortest-paths-all-2009.dat: results/stage1/data-all-2009.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2009
+results/stage2/shortest-paths-all-2010.dat: results/stage1/data-all-2010.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2010
+results/stage2/shortest-paths-all-2011.dat: results/stage1/data-all-2011.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2011
+results/stage2/shortest-paths-all-2012.dat: results/stage1/data-all-2012.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2012
+results/stage2/shortest-paths-all-2013.dat: results/stage1/data-all-2013.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2013
+results/stage2/shortest-paths-all-2014.dat: results/stage1/data-all-2014.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2014
+results/stage2/shortest-paths-all-2015.dat: results/stage1/data-all-2015.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2015
+results/stage2/shortest-paths-all-2016.dat: results/stage1/data-all-2016.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2016
+results/stage2/shortest-paths-all-2017.dat: results/stage1/data-all-2017.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2017
+results/stage2/shortest-paths-all-2018.dat: results/stage1/data-all-2018.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2018
+results/stage2/shortest-paths-all-2019.dat: results/stage1/data-all-2019.dat bin/calculate_shortest_paths.py
+	python2.7 bin/calculate_shortest_paths.py all-2019
 
 #-------------------------------------Stage 3-------------------------------------#
 
