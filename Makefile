@@ -99,7 +99,7 @@ CLUSTERS = results/stage3/cluster-all-2001.dat \
 			results/stage3/cluster-all-2017.dat \
 			results/stage3/cluster-all-2018.dat \
 
-all: $(DATA_ALL) $(DATA_OLDEST)
+all: $(K_SHELLS) $(SHORTEST_PATHS) $(DATA_OLDEST)
 
 #-------------------------------------Stage 1-------------------------------------#
 
