@@ -5,8 +5,6 @@ import datetime
 from _pybgpstream import BGPStream, BGPRecord
 import os
 
-start = time.time()
-
 stream = BGPStream()
 rec = BGPRecord()
 graph = nx.Graph()
@@ -87,6 +85,3 @@ saveFile.write('set nodes: ' + str(len(setNodes)) + '\n')
 for e in graph.edges:
     saveFile.write(str(e) + '\n')
 
-end = time.time()
-graph.number_of_edges()
-print 'runtime for ' + year + ': ' + str(int(end - start))
