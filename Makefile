@@ -79,7 +79,7 @@ CLUSTERS = results/stage3/cluster-all-2001.dat \
 			results/stage3/cluster-all-2017.dat \
 			results/stage3/cluster-all-2018.dat \
 
-all: $(K_SHELLS) $(SHORTEST_PATHS) $(DATA_OLDEST)
+all: $(CLUSTERS) (DATA_OLDEST)
 
 #-------------------------------------Stage 1-------------------------------------#
 
@@ -204,43 +204,43 @@ results/stage2/kshells-all-2001.dat: results/stage1/data-all-2001.dat bin/calcul
 #-------------------------------------Stage 3-------------------------------------#
 
 results/stage3/cluster-all-2001.dat: results/stage1/data-all-2001.dat results/stage2/kshells-all-2001.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2001
+	python2.7 bin/calculate_clusters.py all-2001 0
 results/stage3/cluster-all-2002.dat: results/stage1/data-all-2002.dat results/stage2/kshells-all-2002.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2002
+	python2.7 bin/calculate_clusters.py all-2002 0
 results/stage3/cluster-all-2003.dat: results/stage1/data-all-2003.dat results/stage2/kshells-all-2003.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2003
+	python2.7 bin/calculate_clusters.py all-2003 0
 results/stage3/cluster-all-2004.dat: results/stage1/data-all-2004.dat results/stage2/kshells-all-2004.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2004
+	python2.7 bin/calculate_clusters.py all-2004 0
 results/stage3/cluster-all-2005.dat: results/stage1/data-all-2005.dat results/stage2/kshells-all-2005.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2005
+	python2.7 bin/calculate_clusters.py all-2005 0
 results/stage3/cluster-all-2006.dat: results/stage1/data-all-2006.dat results/stage2/kshells-all-2006.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2006
+	python2.7 bin/calculate_clusters.py all-2006 0
 results/stage3/cluster-all-2007.dat: results/stage1/data-all-2007.dat results/stage2/kshells-all-2007.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2007
+	python2.7 bin/calculate_clusters.py all-2007 0
 results/stage3/cluster-all-2008.dat: results/stage1/data-all-2008.dat results/stage2/kshells-all-2008.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2008
+	python2.7 bin/calculate_clusters.py all-2008 0
 results/stage3/cluster-all-2009.dat: results/stage1/data-all-2009.dat results/stage2/kshells-all-2009.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2009
+	python2.7 bin/calculate_clusters.py all-2009 0
 results/stage3/cluster-all-2010.dat: results/stage1/data-all-2010.dat results/stage2/kshells-all-2010.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2010
+	python2.7 bin/calculate_clusters.py all-2010 0
 results/stage3/cluster-all-2011.dat: results/stage1/data-all-2011.dat results/stage2/kshells-all-2011.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2011
+	python2.7 bin/calculate_clusters.py all-2011 0
 results/stage3/cluster-all-2012.dat: results/stage1/data-all-2012.dat results/stage2/kshells-all-2012.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2012
+	python2.7 bin/calculate_clusters.py all-2012 0
 results/stage3/cluster-all-2013.dat: results/stage1/data-all-2013.dat results/stage2/kshells-all-2013.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2013
+	python2.7 bin/calculate_clusters.py all-2013 0
 results/stage3/cluster-all-2014.dat: results/stage1/data-all-2014.dat results/stage2/kshells-all-2014.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2014
+	python2.7 bin/calculate_clusters.py all-2014 0
 results/stage3/cluster-all-2015.dat: results/stage1/data-all-2015.dat results/stage2/kshells-all-2015.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2015
+	python2.7 bin/calculate_clusters.py all-2015 0
 results/stage3/cluster-all-2016.dat: results/stage1/data-all-2016.dat results/stage2/kshells-all-2016.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2016
+	python2.7 bin/calculate_clusters.py all-2016 0
 results/stage3/cluster-all-2017.dat: results/stage1/data-all-2017.dat results/stage2/kshells-all-2017.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2017
+	python2.7 bin/calculate_clusters.py all-2017 0
 results/stage3/cluster-all-2018.dat: results/stage1/data-all-2018.dat results/stage2/kshells-all-2018.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2018
+	python2.7 bin/calculate_clusters.py all-2018 0
 results/stage3/cluster-all-2019.dat: results/stage1/data-all-2019.dat results/stage2/kshells-all-2019.dat bin/calculate_clusters.py
-	python2.7 bin/calculate_clusters.py all-2019
+	python2.7 bin/calculate_clusters.py all-2019 0
 
 #--------------------------------------------------------------------------#
 
