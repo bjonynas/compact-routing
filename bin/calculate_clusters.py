@@ -109,7 +109,9 @@ violations = 0
 n = graph.number_of_nodes()
 limit = 4*math.sqrt(n * math.log(n))
 
+total_cluster_size = 0
 for nodeId in graph.nodes:
+    total_cluster_size = total_cluster_size + len(graph.nodes()[nodeId]['cluster'])
     if len(graph.nodes[nodeId]['cluster']) > limit:
         violations = violations + 1
 
@@ -118,6 +120,7 @@ if not os.path.exists('./results/stage3'):
 
 pathFile = open('results/stage3/path-data-' + sys.argv[1] + '.dat', 'w+')
 pathFile.write('average path length: ' + str(pathLenTotal / numPaths) + '\n')
+pathFile.write('average cluster size: ' + str(total_cluster_size / graph.number_of_nodes()))
 for length in pathLenFreq.keys():
     pathFile.write(str(length) + ': ' + str(pathLenFreq[length]) + '\n')
 pathFile.close()
