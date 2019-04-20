@@ -98,10 +98,10 @@ for nodeId in graph.nodes:
             if len(paths[destinationId]) < minDist:
                 destination = graph.nodes[destinationId]
                 try:
-                    destination['cluster'][nodeId] = paths[destinationId][-1]
+                    destination['cluster'][nodeId] = paths[destinationId][-2]
                 except:
                     destination['cluster'] = {}
-                    destination['cluster'][nodeId] = paths[destinationId][-1]
+                    destination['cluster'][nodeId] = paths[destinationId][-2]
     graph.nodes[nodeId]['cluster'] = cluster
 
 #check that all clusters are under the size limit of 4 * sqrt(n log n)
