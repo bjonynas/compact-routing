@@ -76,8 +76,8 @@ CLUSTERS = results/stage3/cluster-all-2001.dat \
 			results/stage3/cluster-all-2015.dat \
 			results/stage3/cluster-all-2016.dat \
 			results/stage3/cluster-all-2017.dat \
-#			results/stage3/cluster-all-2018.dat \
-#			results/stage3/cluster-all-2019.dat \
+			results/stage3/cluster-all-2018.dat \
+			results/stage3/cluster-all-2019.dat 
 
 PATH_STRETCH = results/stage4/path-stretch-all-2001.dat \
 				results/stage4/path-stretch-all-2002.dat \
@@ -96,8 +96,8 @@ PATH_STRETCH = results/stage4/path-stretch-all-2001.dat \
 				results/stage4/path-stretch-all-2015.dat \
 				results/stage4/path-stretch-all-2016.dat \
 				results/stage4/path-stretch-all-2017.dat \
-#				results/stage4/path-stretch-all-2018.dat \
-#				results/stage4/path-stretch-all-2019.dat \
+				results/stage4/path-stretch-all-2018.dat \
+				results/stage4/path-stretch-all-2019.dat
 
 all: $(PATH_STRETCH) $(DATA_OLDEST)
 
