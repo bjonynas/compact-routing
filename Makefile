@@ -99,7 +99,7 @@ PATH_STRETCH = results/stage4/path-stretch-all-2001.dat \
 #				results/stage4/path-stretch-all-2018.dat \
 #				results/stage4/path-stretch-all-2019.dat \
 
-all: $(CLUSTERS) $(DATA_OLDEST)
+all: $(PATH_STRETCH) $(DATA_OLDEST)
 
 #-------------------------------------Stage 1-------------------------------------#
 
