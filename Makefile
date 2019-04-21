@@ -77,7 +77,7 @@ CLUSTERS = results/stage3/cluster-all-2001.dat \
 			results/stage3/cluster-all-2016.dat \
 			results/stage3/cluster-all-2017.dat \
 			results/stage3/cluster-all-2018.dat \
-			results/stage3/cluster-all-2019.dat 
+			results/stage3/cluster-all-2019.dat
 
 PATH_STRETCH = results/stage4/path-stretch-all-2001.dat \
 				results/stage4/path-stretch-all-2002.dat \

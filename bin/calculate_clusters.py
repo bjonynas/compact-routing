@@ -119,8 +119,9 @@ if not os.path.exists('./results/stage3'):
     os.makedirs('./results/stage3')
 
 pathFile = open('results/stage3/path-data-' + sys.argv[1] + '.dat', 'w+')
-pathFile.write('average path length: ' + str(pathLenTotal / numPaths) + '\n')
-pathFile.write('average cluster size: ' + str(total_cluster_size / graph.number_of_nodes()))
+pathFile.write('average path length: ' + str(round(float(pathLenTotal) / float(numPaths), 2)) + '\n')
+averageCSize = round(float(total_cluster_size) / float(graph.number_of_nodes()))
+pathFile.write('average cluster size: ' + str(averageCSize) + '\n')
 for length in pathLenFreq.keys():
     pathFile.write(str(length) + ': ' + str(pathLenFreq[length]) + '\n')
 pathFile.close()
