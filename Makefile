@@ -315,22 +315,28 @@ results/stage4/path-stretch-all-2019.dat: results/stage1/data-all-2019.dat resul
 
 #-------------------------------------Figures-------------------------------------#
 
-dissertation/images/average-cluster-size.pdf dissertation/images/nodes-with-clusters.pdf: $(CLUSTERS) bin/plot_average_clusters.py
-	python2.7 bin/plot_average_clusters.py
-dissertation/images/k-cores.pdf: $(K_SHELLS) bin/plot_kshells.py
-	python2.7 bin/plot_kshells.py
-dissertation/images/num-nodes-all.pdf: $(DATA_ALL) bin/plot_nodes-all.py
-	python2.7 bin/plot_nodes-all.py
 dissertation/images/num-nodes.pdf: $(DATA_ALL) $(DATA_OLDEST) bin/plot_nodes.py
 	python2.7 bin/plot_nodes.py
+dissertation/images/num-nodes-all.pdf: $(DATA_ALL) bin/plot_nodes-all.py
+	python2.7 bin/plot_nodes-all.py
 dissertation/images/num_edges.pdf: $(DATA_ALL) $(DATA_OLDEST) bin/plot_edges.py
 	python2.7 bin/plot_edges.py
+dissertation/images/k-cores.pdf: $(K_SHELLS) bin/plot_kshells.py
+	python2.7 bin/plot_kshells.py
+dissertation/images/average-cluster-size.pdf dissertation/images/nodes-with-clusters.pdf: $(CLUSTERS) bin/plot_average_clusters.py
+	python2.7 bin/plot_average_clusters.py
 dissertation/images/path-averages.pdf: $(CLUSTERS) bin/plot_average_paths.py
 	python2.7 bin/plot_average_paths.py
 dissertation/images/path-frequencies.pdf: $CLUSTERS) bin/plot_path_length_frequencies.py
 	python2.7 bin/plot_path_length_frequencies.py
 dissertation/images/path-stretch.pdf: $(PATH_STRETCH) bin/plot_path_stretch.py
 	python2.7 bin/plot_path_stretch.py
+
+
+#-------------------------------------Dissertation-------------------------------------#
+
+MSci_project_2133815.pdf: $(FIGURES)
+	pdflatex dissertation/MSci_project_2133815.tex
 
 #--------------------------------------------------------------------------#
 
