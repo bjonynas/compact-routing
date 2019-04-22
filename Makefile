@@ -109,7 +109,7 @@ FIGURES = dissertation/images/average-cluster-size.pdf \
 			dissertation/images/path-frequencies.pdf \
 			dissertation/images/path-stretch.pdf
 
-all: setup MSci_project_2133815.pdf
+all: MSci_project_2133815.pdf
 
 setup:
 #	./server_install.sh
@@ -119,82 +119,82 @@ setup:
 
 #-------------------------------------Stage 1-------------------------------------#
 
-results/stage1/data-all-2019.dat: bin/get_data_all.py
+results/stage1/data-all-2019.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2019
-results/stage1/data-all-2018.dat: bin/get_data_all.py
+results/stage1/data-all-2018.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2018
-results/stage1/data-all-2017.dat: bin/get_data_all.py
+results/stage1/data-all-2017.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2017
-results/stage1/data-all-2016.dat: bin/get_data_all.py
+results/stage1/data-all-2016.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2016
-results/stage1/data-all-2015.dat: bin/get_data_all.py
+results/stage1/data-all-2015.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2015
-results/stage1/data-all-2014.dat: bin/get_data_all.py
+results/stage1/data-all-2014.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2014
-results/stage1/data-all-2013.dat: bin/get_data_all.py
+results/stage1/data-all-2013.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2013
-results/stage1/data-all-2012.dat: bin/get_data_all.py
+results/stage1/data-all-2012.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2012
-results/stage1/data-all-2011.dat: bin/get_data_all.py
+results/stage1/data-all-2011.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2011
-results/stage1/data-all-2010.dat: bin/get_data_all.py
+results/stage1/data-all-2010.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2010
-results/stage1/data-all-2009.dat: bin/get_data_all.py
+results/stage1/data-all-2009.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2009
-results/stage1/data-all-2008.dat: bin/get_data_all.py
+results/stage1/data-all-2008.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2008
-results/stage1/data-all-2007.dat: bin/get_data_all.py
+results/stage1/data-all-2007.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2007
-results/stage1/data-all-2006.dat: bin/get_data_all.py
+results/stage1/data-all-2006.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2006
-results/stage1/data-all-2005.dat: bin/get_data_all.py
+results/stage1/data-all-2005.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2005
-results/stage1/data-all-2004.dat: bin/get_data_all.py
+results/stage1/data-all-2004.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2004
-results/stage1/data-all-2003.dat: bin/get_data_all.py
+results/stage1/data-all-2003.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2003
-results/stage1/data-all-2002.dat: bin/get_data_all.py
+results/stage1/data-all-2002.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2002
-results/stage1/data-all-2001.dat: bin/get_data_all.py
+results/stage1/data-all-2001.dat: bin/get_data_all.py setup
 	python2.7 bin/get_data_all.py 2001
 
-results/stage1/data-oldest-2019.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2019.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2019
-results/stage1/data-oldest-2018.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2018.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2018
-results/stage1/data-oldest-2017.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2017.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2017
-results/stage1/data-oldest-2016.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2016.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2016
-results/stage1/data-oldest-2015.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2015.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2015
-results/stage1/data-oldest-2014.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2014.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2014
-results/stage1/data-oldest-2013.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2013.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2013
-results/stage1/data-oldest-2012.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2012.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2012
-results/stage1/data-oldest-2011.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2011.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2011
-results/stage1/data-oldest-2010.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2010.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2010
-results/stage1/data-oldest-2009.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2009.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2009
-results/stage1/data-oldest-2008.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2008.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2008
-results/stage1/data-oldest-2007.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2007.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2007
-results/stage1/data-oldest-2006.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2006.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2006
-results/stage1/data-oldest-2005.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2005.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2005
-results/stage1/data-oldest-2004.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2004.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2004
-results/stage1/data-oldest-2003.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2003.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2003
-results/stage1/data-oldest-2002.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2002.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2002
-results/stage1/data-oldest-2001.dat: bin/get_data_oldest.py
+results/stage1/data-oldest-2001.dat: bin/get_data_oldest.py setup
 	python2.7 bin/get_data_oldest.py 2001
 #-------------------------------------Stage 2-------------------------------------#
 
