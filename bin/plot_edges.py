@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plot
 from matplotlib.ticker import MaxNLocator
 from matplotlib.pyplot import figure
+import os
 
 #read in data
 
@@ -47,6 +48,9 @@ plot.plot(years, oldest_edges, label='Oldest Collectors')
 plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.legend()
-plot.title('Number of Connections')
+plot.title('Number of Edges')
 
-plot.show()
+if not os.path.exists('./dissertation/images'):
+    os.makedirs('./dissertation/images')
+
+plot.savefig('dissertation/images/num_edges.pdf')

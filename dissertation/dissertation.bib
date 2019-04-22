@@ -1,0 +1,80 @@
+@misc{ RIRStats,
+    author = "{Patrick Maigron}",
+    title = "{RIR Delegations \& Ripe NCC Allocations}",
+    year = "2019",
+    howpublished = "\url{https://www-public.imtbs-tsp.eu/~maigron/RIR_Stats/RIR_Delegations/World/ASN-ByNb.html}",
+    note = "[Online; accessed 05-April-2019]"
+}
+@techreport{rfc4271,
+  author = "{Y. Rekhter, T. Li, S. Hares}",
+  title = {A Border Gateway Protocol 4 (BGP-4)},
+  howpublished = {Internet Requests for Comments},
+  type = {RFC},
+  number = 4271,
+  year = {2006},
+  month = {January},
+  issn = {2070-1721},
+  publisher = {RFC Editor},
+  institution = {RFC Editor},
+  url = {http://www.rfc-editor.org/rfc/rfc4271.txt}
+}
+
+@article{strowes,
+	title = {{COMPACT} {ROUTING} {FOR} {THE} {FUTURE} {INTERNET}},
+	language = {en},
+	author = {Strowes, Stephen D}
+}
+
+@inproceedings{thorup,
+	title = {Compact {Routing} {Schemes}},
+	abstract = {We describe several compact routing schemes for general weighted undirected networks. Our schemes are simple and easy to implement. The routing tables stored at the nodes of the network are all very small. The headers attached to the routed messages, including the name of the destination, are extremely short. The routing decision at each node takes constant time. Yet, the stretch of these routing schemes, i.e., the worst ratio between the cost of the path on which a packet is routed and the cost of the cheapest path from source to destination, is a small constant. Our schemes achieve a near-optimal tradeoff between the size of the routing tables used and the resulting stretch. More specifically, we obtain: 1. A routing scheme that uses only {\textasciitilde} O(n1=2) bits of memory at each node of an n -node network that has stretch 3. The space is optimal, up to logarithmic factors, in the sense that every routing scheme with stretch {\textless} 3 must use, on some neworks, routing tables of total size ?(n2) , and every routing scheme with stretch {\textless} 5 must use, on some networks, routing tables of total size ?(n3=2) . The headers used are only (1 + o(1)) log 2 n -bit long and each routing decision takes constant time. A variant of this scheme with dlog 2 ne-bit headers makes routing decisions in O (log log n) time. 2. Also, for every integer k {\textgreater} 2 , a general handshaking based routing scheme that uses {\textasciitilde}O (n1=k) bits of memory at eachnode that has stretch 2k ? 1 . A conjecture of Erd˝ os from 1963, settled for k = 3; 5 , implies that the routing tables are of near-optimal size relative to the stretch. The handshaking is similar in spirit to a DNS lookup in TCP/IP. Headers are o(log 2 n) bits long and each routing decision takes constant time. Without handshaking, the stretch of the scheme increases to 4k ? 5 .One ingredient used to obtain the routing schemes mentioned above, may be of independent practical and theoretical interest: ? Work supported in part by the Israel Science Foundation founded by The Israel Academy of Sciences and Humanities. Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page. To copy otherwise, to republish, to post on servers or to redistribute to lists, requires prior specific permission and/or a fee. Copyright 2001 ACM 0-89791-88-6/97/05 ... \$ 5.00. 3. A shortest path routing scheme for trees of arbitrary degree and diameter that assigns each vertex of an n -node tree a (1 + o(1)) log 2 n -bit label. Given the label of a source node and the label of a destination it is possible to compute, in constant time, the port number of the edge from the source that heads in the direction of the destination. The general scheme for k {\textgreater} 2 also uses a clustering technique introduced recently by the authors. The clusters obtained using this technique induce a sparse and low stretch tree cover of the network. This essentially reduces routing in general networks into routing problems in trees that could be solved using the above technique.}, 	
+	author = {Thorup, Mikkel and Zwick, Uri},
+	year = {2001}
+}
+
+@article{gregori,
+	title = {The impact of {IXPs} on the {AS}-level topology structure of the {Internet}},
+	volume = {34},
+	issn = {01403664},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S014036641000383X},
+	doi = {10.1016/j.comcom.2010.09.002},
+	abstract = {The AS-level topology of the Internet has been quite a hot research topic in the last few years. However, only a small number of studies have been developed that give a structural interpretation of this graph. Such an interpretation is crucially important in order to test protocols and optimal routing algorithms, to design efficient networks, and for failure detection purposes. Moreover, most research does not highlight the role that IXPs have on the AS-level structure of the Internet, although their role is recognized as fundamental.},
+	language = {en},
+	number = {1},
+	urldate = {2018-10-15},
+	journal = {Computer Communications},
+	author = {Gregori, Enrico and Improta, Alessandro and Lenzini, Luciano and Orsini, Chiara},
+	month = jan,
+	year = {2011}
+}
+
+@article{carisimo,
+	title = {Studying the {Evolution} of {Content} {Providers} in the {Internet} {Core}},
+	abstract = {There is recent evidence that the core of the Internet, which was formerly dominated by large transit providers, has been reshaped after the transition to a multimedia-oriented network, ﬁrst by general-purpose CDNs and now by private CDNs. In this work we use k-cores, an element of graph theory, to deﬁne which ASes compose the core of the Internet and to track the evolution of the core since 1999. Speciﬁcally, we investigate whether large players in the Internet content and CDN ecosystem belong to the core and, if so, since when. We further investigate regional differences in the evolution of large content providers. Finally, we show that the core of the Internet has incorporated an increasing number of content ASes in recent years. To enable reproducibility of this work, we provide a website to allow interactive analysis of our datasets to detect, for example, “up and coming” ASes using customized queries.},
+	language = {en},
+	year = {2018},
+	author = {Carisimo, Esteban and Selmo, Carlos and Alvarez-Hamelin, J Ignacio and Dhamdhere, Amogh}
+}
+
+@inproceedings{gill,
+	title = {The {Flattening} {Internet} {Topology}: {Natural} {Evolution}, {Unsightly} {Barnacles} or {Contrived} {Collapse}?},
+	abstract = {In this paper we collect and analyze traceroute measure-
+ments 1 to show that large content providers (e.g., Google, Microsoft,
+Yahoo!) are deploying their own wide-area networks, bringing their net-
+works closer to users, and bypassing Tier-1 ISPs on many paths. This
+trend, should it continue and be adopted by more content providers,
+could flatten the Internet topology, and may result in numerous other
+consequences to users, Internet Service Providers (ISPs), content
+providers, and network researchers.},
+	language = {en},
+	author = {Gill, Phillipa and Arlitt, Martin and Li, Zongpeng and Mahanti, Anirban},
+	year = {2008}
+}
+
+@misc{ CIDR-Report,
+    author = "{Tony Bates, Philip Smith, Geoff Houston }",
+    title = "{Active BGP entries (FIB)}",
+    year = "2019",
+    howpublished = "\url{https://www.cidr-report.org/cgi-bin/plota?file=%2Fvar%2Fdata%2Fbgp%2Fas2.0%2Fbgp-active.txt&descr=Active+BGP+entries+%28FIB%29&ylabel=Active+BGP+entries+%28FIB%29&range=--OR--&StartDate=01%2F01%2F2001&EndDate=01%2F01%2F2019&yrange=Auto&ymin=&ymax=&Width=1&Height=1&with=Step&color=auto&logscale=linear}",
+    note = "[Online; accessed 17-04-2019]"
+}
