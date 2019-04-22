@@ -2,7 +2,7 @@
 venv
 results
 dissertation/images/average-cluster-size.pdf
-dissertation/images/k-cores.pdf
+dissertation/images/k-shells.pdf
 dissertation/images/landmark-size.pdf
 dissertation/images/nodes-with-clusters.pdf
 dissertation/images/num-nodes.pdf
@@ -12,3 +12,5 @@ dissertation/images/num-nodes.pdf
 dissertation/images/path-averages.pdf
 dissertation/images/path-frequencies.pdf
 dissertation/images/path-stretch.pdf
+dissertation/images/k-cores.pdf
+dissertation/images/num-nodes-all.pdf
