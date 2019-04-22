@@ -1,5 +1,5 @@
 
-\documentclass{mpaper}
+\documentclass{dissertation/mpaper}
 \usepackage{subfigure}
 \usepackage{caption}
 
@@ -47,8 +47,8 @@ A major motivator for adopting compact routing algorithms for inter-AS routing h
 
 \begin{figure*}
   \centering
-  \subfigure[the growth in the number of ASes visible to BGPStream between 2001 and 2019 ]{\includegraphics[width=.4\paperwidth]{images/num-nodes-all.pdf}}\hfill
-  \subfigure[the growth in the number of entries in BGP routing tables between 2001 and 2019 \cite{CIDR-Report}]{\includegraphics[width=.4\paperwidth]{images/bgpEntries.png}}
+  \subfigure[the growth in the number of ASes visible to BGPStream between 2001 and 2019 ]{\includegraphics[width=.4\paperwidth]{dissertation/images/num-nodes-all.pdf}}\hfill
+  \subfigure[the growth in the number of entries in BGP routing tables between 2001 and 2019 \cite{CIDR-Report}]{\includegraphics[width=.4\paperwidth]{dissertation/images/bgpEntries.png}}
   \caption {Growth in the number of AS numbers detected using BGPStream and the number of entries in BGP routing tables}
 \end{figure*}
 
@@ -86,8 +86,8 @@ For the purposes of the project, snapshots of the AS graph had to be gathered. T
 
 \begin{figure*}
   \centering
-  \subfigure[the number of ASes discovered ]{\includegraphics[width=.4\paperwidth]{images/num-nodes.pdf}}\hfill
-  \subfigure[the number of connections between ASes discovered  ]{\includegraphics[width=.4\paperwidth]{images/num_edges.pdf}}\hfill
+  \subfigure[the number of ASes discovered ]{\includegraphics[width=.4\paperwidth]{dissertation/images/num-nodes.pdf}}\hfill
+  \subfigure[the number of connections between ASes discovered  ]{\includegraphics[width=.4\paperwidth]{dissertation/images/num_edges.pdf}}\hfill
   \caption{The difference in number of ASes and connections between them discovered when using the set of oldest collectors and all available collectors}
 \end{figure*}
 
@@ -99,15 +99,15 @@ The data gathered for the project also provides some insight into the topology o
 
 \begin{figure*}
     \centering
-    \includegraphics{images/path-frequencies.pdf}
+    \includegraphics{dissertation/images/path-frequencies.pdf}
     \caption{Numbers of nodes with different degrees of connectivity}
     \captionsetup{justification=centering}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \subfigure[the percentage of snapshots with clusters greater than 0 ]{\includegraphics[width=.4\paperwidth]{images/nodes-with-clusters.pdf}}\hfill
-  \subfigure[the average cluster size of nodes that have a cluster size greater than 0 ]{\includegraphics[width=.4\paperwidth]{images/average-cluster-size.pdf}}\hfill
+  \subfigure[the percentage of snapshots with clusters greater than 0 ]{\includegraphics[width=.4\paperwidth]{dissertation/images/nodes-with-clusters.pdf}}\hfill
+  \subfigure[the average cluster size of nodes that have a cluster size greater than 0 ]{\includegraphics[width=.4\paperwidth]{dissertation/images/average-cluster-size.pdf}}\hfill
   \caption{Cluster data for each snapshot}
 \end{figure*}
 
@@ -128,14 +128,14 @@ Figure 5 presents the average cluster size for nodes that do have a cluster. Thi
 
 \begin{figure*}
     \centering
-    \includegraphics{images/k-cores.pdf}
+    \includegraphics{dissertation/images/k-cores.pdf}
     \caption{The sizes of k-max, k+1, and $s$ and the total number of nodes in each snapshot}
 \end{figure*}
 
 \begin{figure*}
   \centering
-  \subfigure[Average shortest path length for each year using TZ routing]{\includegraphics[width=.4\paperwidth]{images/path-averages.pdf}}\hfill
-  \subfigure[the average path stretch for each snapshot using TZ routing ]{\includegraphics[width=.4\paperwidth]{images/path-stretch.pdf}}\hfill
+  \subfigure[Average shortest path length for each year using TZ routing]{\includegraphics[width=.4\paperwidth]{dissertation/images/path-averages.pdf}}\hfill
+  \subfigure[the average path stretch for each snapshot using TZ routing ]{\includegraphics[width=.4\paperwidth]{dissertation/images/path-stretch.pdf}}\hfill
 \end{figure*}
 
 \section{Path Stretch using the TZ algorithm}

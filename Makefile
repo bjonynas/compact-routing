@@ -338,6 +338,14 @@ clean:
 
 	rm $(DATA_ALL)
 	rm $(DATA_OLDEST)
-
-	rm $(K_CORES)
+	rm $(K_SHELLS)
+	rm $(CLUSTERS)
+	rm $(PATH_STRETCH)
+	rm $(FIGURES)
 	rm -rf results
+
+	rm dissertation
+	rm dissertation.aux
+	rm dissertation.log
+	rm dissertation.out
+	rm dissertation.pdf
