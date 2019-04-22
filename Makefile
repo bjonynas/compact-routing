@@ -333,7 +333,7 @@ dissertation/images/average-cluster-size.pdf dissertation/images/nodes-with-clus
 	python2.7 bin/plot_average_clusters.py
 dissertation/images/path-averages.pdf: $(CLUSTERS) bin/plot_average_paths.py
 	python2.7 bin/plot_average_paths.py
-dissertation/images/path-frequencies.pdf: $CLUSTERS) bin/plot_path_length_frequencies.py
+dissertation/images/path-frequencies.pdf: $(CLUSTERS) bin/plot_path_length_frequencies.py
 	python2.7 bin/plot_path_length_frequencies.py
 dissertation/images/path-stretch.pdf: $(PATH_STRETCH) bin/plot_path_stretch.py
 	python2.7 bin/plot_path_stretch.py
