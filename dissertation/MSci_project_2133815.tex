@@ -1,9 +1,8 @@
 
-\documentclass{dissertation/mpaper}
+\documentclass{mpaper}
 \usepackage{subfigure}
 \usepackage{caption}
-\usepackage[backend=bibtex]{biblatex}
-\bibliography{./dissertation/MSci_project_2133815j.bib}
+
 \begin{document}
 
 \title{Compact Routing for Today's Internet}
@@ -13,7 +12,7 @@
 \maketitle
 
 \begin{abstract}
-    The Internet has been growing at a rapid rate at the AS level and routing tables have grown alongside it, requiring larger and larger routing tables to ensure that all destinations can be reached. Because of this greater expense is introduced to ISPs who need to continue improving their hardware to maintain quality of service. This paper shows that the Thorup-Zwick compact routing algorithm could be used to reduce the size of routing tables significantly with low path stretch, which could be a potential solution to the scalability issues of the current system.
+    The Internet has been growing at a rapid rate at the AS level and routing tables have grown alongside it, requiring larger and larger routing tables to ensure that all destinations can be reached. Because of this, greater expense is introduced to ISPs who need to continuously improve their hardware to maintain quality of service. This paper shows that the Thorup-Zwick compact routing algorithm could be used to reduce the size of routing tables significantly with low path stretch, which could be a potential solution to the scalability issues of the current system.
 \end{abstract}
 
 \section{Introduction}
@@ -101,7 +100,7 @@ The data gathered for the project also provides some insight into the topology o
 \begin{figure*}
     \centering
     \includegraphics{dissertation/images/path-frequencies.pdf}
-    \caption{Numbers of nodes with different degrees of connectivity}
+    \caption{Percentages of paths of different lengths in each snapshot}
     \captionsetup{justification=centering}
 \end{figure*}
 
@@ -137,6 +136,7 @@ Figure 5 presents the average cluster size for nodes that do have a cluster. Thi
   \centering
   \subfigure[Average shortest path length for each year using TZ routing]{\includegraphics[width=.4\paperwidth]{dissertation/images/path-averages.pdf}}\hfill
   \subfigure[the average path stretch for each snapshot using TZ routing ]{\includegraphics[width=.4\paperwidth]{dissertation/images/path-stretch.pdf}}\hfill
+  \caption{The average shortest path length in each snapshot and average path stretch prodiced when using the TZ algorithm in each snapshot}
 \end{figure*}
 
 \section{Path Stretch using the TZ algorithm}
@@ -178,5 +178,6 @@ Finally the project has shown that TZ routing with a landmark set chosen using k
 
 \newpage
 \bibliographystyle{abbrv}
+\bibliography{dissertation}
 
 \end{document}
