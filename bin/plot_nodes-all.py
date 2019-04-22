@@ -28,6 +28,8 @@ plot.plot(years, all_nodes, label='All Collectors')
 plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.title('Number of ASes')
+plot.xlabel('Year')
+plot.ylabel('Number of ASes in the snapshot')
 
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')

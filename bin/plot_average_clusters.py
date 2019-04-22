@@ -77,6 +77,8 @@ plot.plot(years, averageClusterSize, label='Average Cluster Size')
 plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.title('Average Cluster Size in Each Snapshot')
+plot.xlabel('Year')
+plot.ylabel('Average number of nodes in each cluster')
 
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')
@@ -93,6 +95,8 @@ plot.plot(years, nodesWithClusters, label='Nodes with Clusters')
 plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.title('Percentage of nodes with clusters in each snapshot')
+plot.xlabel('Year')
+plot.ylabel('Percentage of nodes that have a cluster')
 
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')

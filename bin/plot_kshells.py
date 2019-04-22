@@ -55,6 +55,9 @@ plot.plot(years, s, label = 's')
 plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.legend()
+plot.xlabel('Year')
+plot.ylabel('Number of nodes')
+
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')
 

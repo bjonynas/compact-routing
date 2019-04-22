@@ -59,6 +59,9 @@ graph.xaxis.set_major_locator(mtick.MaxNLocator(integer=True))
 graph.yaxis.set_major_locator(mtick.MaxNLocator(integer=True))
 plot.legend(prop={'size': 6})
 plot.title('Path Length Frequencies')
+plot.xlabel('Path Length')
+plot.ylabel('Percentage of paths')
+
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')
 

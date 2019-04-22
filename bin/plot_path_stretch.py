@@ -26,6 +26,8 @@ plot.plot(years, path_stretch, label='Average Path Stretch')
 plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.title('Average path stretch for each snapshot using TZ routing')
+plot.xlabel('Year')
+plot.ylabel('Average path stretch')
 
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')

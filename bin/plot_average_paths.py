@@ -21,11 +21,13 @@ for year in range(1, 20):
 
 years = [2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019]
 graph = figure().gca()
-plot.plot(years, averages, label='Average Path Lnegth')
+plot.plot(years, averages, label='Average Path Length')
 
 plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.title('Average path lengths')
+plot.xlabel('Year')
+plot.ylabel('Average length for all paths')
 
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')

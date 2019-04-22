@@ -49,6 +49,8 @@ plot.xlim(2000, 2020)
 graph.xaxis.set_major_locator(MaxNLocator(integer=True))
 plot.legend()
 plot.title('Number of Edges')
+plot.xlabel('Year')
+plot.ylabel('Number of edges in the snapshot')
 
 if not os.path.exists('./dissertation/images'):
     os.makedirs('./dissertation/images')
