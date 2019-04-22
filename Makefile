@@ -109,7 +109,13 @@ FIGURES = dissertation/images/average-cluster-size.pdf \
 			dissertation/images/path-frequencies.pdf \
 			dissertation/images/path-stretch.pdf
 
-all: $(FIGURES)
+all: setup MSci_project_2133815.pdf
+
+setup:
+	./server_install.sh
+	pip install networkx --user
+	pip install matplotlib --user
+	export LD_LIBRARY_PATH="/home/2133815j/.apps/lib/:$LD_LIBRARY_PATH"
 
 #-------------------------------------Stage 1-------------------------------------#
 
